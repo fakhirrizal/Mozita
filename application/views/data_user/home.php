@@ -111,6 +111,20 @@
                 $("#form_puskesmas").hide();
                 $("#form_desa").hide();
                 $("#form_posyandu").hide();
+            }else if(level == '6'){
+                $("#form_propinsi").show();
+                $("#form_kab").show();
+                $("#form_kec").show();
+                $("#form_puskesmas").hide();
+                $("#form_desa").hide();
+                $("#form_posyandu").hide();
+            }else if(level == '7'){
+                $("#form_propinsi").show();
+                $("#form_kab").show();
+                $("#form_kec").show();
+                $("#form_puskesmas").show();
+                $("#form_desa").show();
+                $("#form_posyandu").hide();
             }else{
                 $("#form_propinsi").hide();
                 $("#form_kab").hide();

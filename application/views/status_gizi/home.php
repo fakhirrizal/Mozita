@@ -29,6 +29,7 @@
                                 ?>
                                 <th class="text-center">Detail</th>
                                 <th class="text-center">Lihat Lokasi</th>
+                                <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -67,6 +67,8 @@
             <!-- <option value="1">Admin</option> -->
             <option value="2" <?= (((isset($data->level) && $data->level == '2') or $_SESSION['level'] == 3)? "selected":"") ?>>Bidan / Kader</option>
             <option value="3" <?= ((isset($data->level) && $data->level == '3')? "selected":"") ?>>Puskesmas</option>
+            <option value="7" <?= ((isset($data->level) && $data->level == '7')? "selected":"") ?>>Lurah</option>
+            <option value="6" <?= ((isset($data->level) && $data->level == '6')? "selected":"") ?>>Camat</option>
             <option value="4" <?= ((isset($data->level) && $data->level == '4')? "selected":"") ?>>Dinas Kesehatan Kabupaten / Kota</option>
             <option value="5" <?= ((isset($data->level) && $data->level == '5')? "selected":"") ?>>Dinas Kesahatan Propinsi</option>
         </select>

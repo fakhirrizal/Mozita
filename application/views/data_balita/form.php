@@ -394,6 +394,15 @@ if(isset($data->lng)){
 
 					<div class="row m-t-20">
 						<div class="col-md-2">
+							<label>Nomor WA Orang tua *</label>
+						</div>
+						<div class="col-md-5">
+							<input name="wa_ortu" type="text" class="form-control" value="<?php if(isset($data->wa_ortu)) echo $data->wa_ortu ?>">
+						</div>
+					</div>
+
+					<div class="row m-t-20">
+						<div class="col-md-2">
 							<label>Keluarga Miskin *</label>
 						</div>
 						<div class="col-md-5">
@@ -533,13 +542,13 @@ if(isset($data->lng)){
 							<label>Garis lintang</label>
 						</div>
 						<div class="col-md-3">
-							<input type="text" class="form-control" name='lat' id='latitude' value="<?php if(isset($data->lat)) echo $data->lat ?>" required readonly>
+							<input type="text" class="form-control" name='lat' id='latitude' value="<?php if(isset($data->lat)) echo $data->lat ?>" required >
 						</div>
 						<div class="col-md-2">
 							<label>Garis bujur</label>
 						</div>
 						<div class="col-md-3">
-							<input type="text" class="form-control" name='lng' id='longitude' value="<?php if(isset($data->lng)) echo $data->lng ?>" required readonly>
+							<input type="text" class="form-control" name='lng' id='longitude' value="<?php if(isset($data->lng)) echo $data->lng ?>" required >
 						</div>
 					</div>
 					<div class="row p-t-20">

@@ -159,7 +159,13 @@ class Status_gizi extends CI_Controller {
 						<a href="'.site_url('/lokasi_balita/'.md5($field->norm)).'">
 							<button type="button" class="btn btn-secondary">Lihat Lokasi</button>
 						</a>
-					</center>';
+                    </center>';
+            $get_no_wa = $this->db->query("SELECT a.* FROM balita a WHERE a.norm='".$field->norm."'")->row();
+            $row[] = '<center>                           
+                        <a href="https://api.whatsapp.com/send?phone='.$get_no_wa->wa_ortu.'">
+                            <button type="button" class="btn btn-secondary">Kirim Pemberitahuan</button>
+                        </a>
+                    </center>';
             $row[] = $baca;
 			$data[] = $row;
 		}

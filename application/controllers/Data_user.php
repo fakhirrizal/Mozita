@@ -192,6 +192,24 @@ class Data_user extends CI_Controller {
                 $next_id = substr($max_id,-3) + 1;
                 $idUser = $id_propinsi."0000000000".sprintf('%03d', $next_id);
             }  
+        }else if($level == "6"){
+            $id_kecamatan = $this->input->post("kecamatan");
+            $max_id = $this->Data_user_m->max_idUser($level, $id_kecamatan)->max_id;
+            if($max_id == 0){
+                $idUser = $id_kecamatan."0000000000001";
+            }else{
+                $next_id = substr($max_id,-3) + 1;
+                $idUser = $id_kecamatan."0000000000".sprintf('%03d', $next_id);
+            }  
+        }else if($level == "7"){
+            $id_desa = $this->input->post("desa");
+            $max_id = $this->Data_user_m->max_idUser($level, $id_desa)->max_id;
+            if($max_id == 0){
+                $idUser = $id_desa."0000000000001";
+            }else{
+                $next_id = substr($max_id,-3) + 1;
+                $idUser = $id_desa."0000000000".sprintf('%03d', $next_id);
+            }  
         }
 
         if($id != null){
