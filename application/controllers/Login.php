@@ -14,7 +14,7 @@ public function __construct() {
 				redirect(site_url("data-user"));
 			}else if($_SESSION['level'] == 2){
 				redirect(site_url("data-penimbangan"));
-			}else if(in_array($_SESSION['level'],array('3','4','5'))){
+			}else if(in_array($_SESSION['level'],array('3','4','5','6','7'))){
 				redirect(site_url("laporan-penimbangan"));
 			}
 		}
@@ -41,6 +41,10 @@ public function __construct() {
 				$pengguna = "Dinas Kesahatan Kabupaten/Kota ".ucwords(strtolower($data_user->kabupaten));
 			}else if($level_user == "5"){
 				$pengguna = "Dinas Kesahatan Propinsi ".ucwords(strtolower($data_user->propinsi));
+			}else if($level_user == "6"){
+				$pengguna = "Camat ".ucwords(strtolower($data_user->kecamatan));
+			}else if($level_user == "7"){
+				$pengguna = "Lurah Desa ".ucwords(strtolower($data_user->desa));
 			}
 
 			if(filter_var($data_user->foto, FILTER_VALIDATE_URL) === FALSE){
@@ -68,7 +72,7 @@ public function __construct() {
 					redirect(site_url("data-user"));
 				}else if($_SESSION['level'] == 2){
 					redirect(site_url("penimbangan"));
-				}else if(in_array($_SESSION['level'],array('3','4','5'))){
+				}else if(in_array($_SESSION['level'],array('3','4','5','6','7'))){
 					redirect(site_url("laporan-penimbangan"));
 				}
 			}else{
