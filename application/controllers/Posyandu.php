@@ -41,6 +41,8 @@ class Posyandu extends CI_Controller {
             $data['data'] = $data_user;
             $data['data_kec'] = $this->Kecamatan_m->get_data($id_kecamatan = null, $data_user->id_kab)->result();
             $data['data_desa'] = $this->Desa_m->desaByIdpusk($data_user->id_pusk)->result();
+            /* get data puskesmas
+            $data['data_pusk'] = $this->Desa_m->desaByIdpusk($data_user->id_pusk)->result(); */
         }else{
             $data['judul']	= 'Tambah Data Posyandu';
             $data['menu']	= 'Data Posyandu';
@@ -91,7 +93,18 @@ class Posyandu extends CI_Controller {
                     echo $data->namapusk;
                 }else{
                     echo "";
-                }                
+                }
+
+                // kodingan baru
+                // $where = substr($id,0,7);
+                // $data = $this->Puskesmas_m->puskesmasByIdKecamatan($where)->result();
+
+                // $list = '<option value="">Pilih</option>';
+                // if(!empty($data)){
+                //     foreach ($data as $rows) {
+                //         $list .= '<option value="'.$rows->idpusk.'">'.$rows->namapusk.'</option>';
+                //     }
+                // }
             break;
         }
     }

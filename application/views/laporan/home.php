@@ -117,10 +117,10 @@
                             </div>
                             <div id="form_kab" class="col-md-6">
                                 <label>Kabupaten / Kota</label>
-                                <select id="kabupaten" class="select2 form-control" style="width:100%" <?= ((in_array($_SESSION['level'], array('2','4')))?" disabled":"") ?>>
+                                <select id="kabupaten" class="select2 form-control" style="width:100%" <?= ((in_array($_SESSION['level'], array('2','4','6')))?" disabled":"") ?>>
                                     <option value="semua">Pilih Semua</option>
                                     <?php
-                                        if($_SESSION['level'] == 2 or $_SESSION['level'] == 4){
+                                        if($_SESSION['level'] == 2 or $_SESSION['level'] == 4 or $_SESSION['level'] == 6){
                                             echo '<option value="'.$data_kab->id.'" selected>'.$data_kab->name.'</option>';
                                         }else{
                                             foreach($data_kab as $rows_kab){
@@ -134,10 +134,10 @@
                         <div class="row m-t-10" <?= (($_SESSION['level'] == 3)?" style='display:none'":"") ?>>
                             <div id="form_kec" class="col-md-6">
                                 <label>Kecamatan</label>
-                                <select id="kecamatan" class="select2 form-control" style="width:100%" <?= ((in_array($_SESSION['level'], array('2')))?" disabled":"") ?>>
+                                <select id="kecamatan" class="select2 form-control" style="width:100%" <?= ((in_array($_SESSION['level'], array('2','6')))?" disabled":"") ?>>
                                     <option value="semua">Pilih Semua</option>
                                     <?php
-                                        if($_SESSION['level'] == 2){
+                                        if($_SESSION['level'] == 2 OR $_SESSION['level'] == 6){
                                             echo '<option value="'.$data_kec->id.'" selected>'.$data_kec->name.'</option>';
                                         }else if($_SESSION['level'] == 4){
                                             foreach($data_kec as $rows_kec){
@@ -154,6 +154,10 @@
                                     <?php
                                         if($_SESSION['level'] == 2){
                                             echo '<option value="'.$data_pusk->idpusk.'" selected>'.$data_pusk->namapusk.'</option>';
+                                        }else if($_SESSION['level'] == 6){
+                                            foreach($data_pus as $rows_pus){
+                                                echo '<option value="'.$rows_pus->idpusk.'">'.$rows_pus->namapusk.'</option>';
+                                            }
                                         }
                                     ?>
                                 </select>

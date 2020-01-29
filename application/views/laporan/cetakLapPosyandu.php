@@ -90,7 +90,7 @@
         <tr>
             <td colspan="3">BB/U</td>
             <td colspan="3">TB/U ATAU PB/U</td>
-            <td colspan="3">BB/TB ATAU BB/PB</td>
+            <td colspan="3">BB/ TB Atau BB/ PB</td>
             <td rowspan="2" width="47">IMT/U</td>
             <td colspan="2">LILA/U</td>
         </tr>

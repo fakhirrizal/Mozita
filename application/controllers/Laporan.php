@@ -35,6 +35,12 @@ class Laporan extends CI_Controller {
             // $data['data_desa'] = $this->Laporan_m->getDesa();
             // $data['data_pusk'] = $this->Laporan_m->getPusk();
             // $data['data_posy'] = $this->Laporan_m->getPosy();
+        }else if($_SESSION['level'] == '6'){
+            $data['data_kab'] = $this->Laporan_m->getKab();
+            $data['data_kec'] = $this->Laporan_m->getKec()->row();
+            // $data['data_desa'] = $this->Laporan_m->getDesa();
+            $data['data_pus'] = $this->Laporan_m->getPuskbyKec()->result();
+            // $data['data_posy'] = $this->Laporan_m->getPosy();
         }
 
         $this->load->view('layout/header', $data);

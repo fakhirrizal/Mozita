@@ -59,10 +59,10 @@
     </a>
 </li>
 <li>
-    <a href="<?= site_url() ?>/balita-bb-tb-atau-bb-pb" class="waves-effect waves-dark <?= ((isset($menu) && $menu == "Balita BB / TB Atau BB / PB" )? "active":"") ?>" aria-expanded="false">
+    <a href="<?= site_url() ?>/balita-bb-tb-atau-bb-pb" class="waves-effect waves-dark <?= ((isset($menu) && $menu == "Balita BB/ TB Atau BB/ PB" )? "active":"") ?>" aria-expanded="false">
         <i class="mdi mdi-equal-box"></i>
         <span class="hide-menu">
-            BB / TB Atau BB / PB
+            BB/ TB Atau BB/ PB
             <?php
                 $jumlah_notif_bb_tb_bb_pb= $this->Status_gizi_m->getJumlahNotif('bb_tb_bb_pb');
                 if($jumlah_notif_bb_tb_bb_pb > 0){
@@ -76,10 +76,10 @@
     </a>
 </li>
 <li>
-    <a href="<?= site_url() ?>/balita-imt-u" class="waves-effect waves-dark <?= ((isset($menu) && $menu == "Balita IMT / U" )? "active":"") ?>" aria-expanded="false">
+    <a href="<?= site_url() ?>/balita-imt-u" class="waves-effect waves-dark <?= ((isset($menu) && $menu == "Balita IMT/ U" )? "active":"") ?>" aria-expanded="false">
         <i class="mdi mdi-equal-box"></i>
         <span class="hide-menu">
-            IMT / U
+            IMT/ U
             <?php
                 $jumlah_notif_imt_u= $this->Status_gizi_m->getJumlahNotif('imt_u');
                 if($jumlah_notif_imt_u > 0){

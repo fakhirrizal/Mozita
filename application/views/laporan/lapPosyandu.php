@@ -55,7 +55,7 @@
                 <tr>
                     <td class="text-center" colspan="3">BB/U</td>
                     <td class="text-center" colspan="3">TB/U ATAU PB/U</td>
-                    <td class="text-center" colspan="3">BB/TB ATAU BB/PB</td>
+                    <td class="text-center" colspan="3">BB/ TB Atau BB/ PB</td>
                     <td class="text-center" rowspan="2">IMT/U</td>
                     <td class="text-center" colspan="2">LILA/U</td>
                 </tr>

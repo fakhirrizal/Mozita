@@ -26,7 +26,7 @@
                     }else{
                         $("#notif_stunting").hide();
                     }
-                }else if(menu == 'Balita BB / TB Atau BB / PB'){
+                }else if(menu == 'Balita BB/ TB Atau BB/ PB'){
                     var notif = $("#notif_bb_tb_bb_pb").text();
                     var jumlah_notif = parseInt(notif) - parseInt(result);
                     if(jumlah_notif > 0){
@@ -34,7 +34,7 @@
                     }else{
                         $("#notif_bb_tb_bb_pb").hide();
                     }
-                }else if(menu == 'Balita IMT / U'){
+                }else if(menu == 'Balita IMT/ U'){
                     var notif = $("#notif_imt_u").text();
                     var jumlah_notif = parseInt(notif) - parseInt(result);
                     if(jumlah_notif > 0){
@@ -269,7 +269,7 @@
 
                             <div class="row m-t-20">
                                 <div class="col-md-4">
-                                    <label>BB / U * </label>                            
+                                    <label>BB/ U * </label>                            
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">
@@ -292,7 +292,7 @@
 
                             <div class="row m-t-20">
                                 <div class="col-md-4">
-                                    <label>TB / U Atau PB / U *</label>                            
+                                    <label>TB/ U Atau PB/ U *</label>                            
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">
@@ -315,7 +315,7 @@
 
                             <div class="row m-t-20">
                                 <div class="col-md-4">
-                                    <label>BB / TB Atau BB / PB *</label>                            
+                                    <label>BB/ TB Atau BB/ PB *</label>                            
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">
@@ -338,7 +338,7 @@
 
                             <div class="row m-t-20">
                                 <div class="col-md-4">
-                                    <label>IMT / U *</label>                            
+                                    <label>IMT/ U *</label>                            
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">
@@ -371,7 +371,7 @@
 
                             <div class="row m-t-20">
                                 <div class="col-md-4">
-                                    <label>LILA / U *</label>                            
+                                    <label>LILA/ U *</label>                            
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">

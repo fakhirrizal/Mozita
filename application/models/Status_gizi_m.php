@@ -41,6 +41,10 @@ class Status_gizi_m extends CI_Model {
 			$where = " WHERE !FIND_IN_SET('4',baca)";
 		}else if($level == '5'){
 			$where = " WHERE !FIND_IN_SET('5',baca)";
+		}else if($level == '6'){
+			$where = " WHERE !FIND_IN_SET('6',baca)";
+		}else if($level == '7'){
+			$where = " WHERE !FIND_IN_SET('7',baca)";
 		}else{
 			$where = "";
 		}

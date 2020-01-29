@@ -128,9 +128,9 @@ Class Data_user_m extends CI_Model{
 		}else if($level == "5"){
 			$where = " WHERE LEVEL = '5' AND SUBSTRING(idUser,'1','12') = '".$id."0000000000'";
 		}else if($level == "6"){
-			$where = " WHERE LEVEL = '6' AND SUBSTRING(idUser,'1','12') = '".$id."000000'";
+			$where = " WHERE LEVEL = '6' AND SUBSTRING(idUser,'1','12') = '".$id."00000'";
 		}else if($level == "7"){
-			$where = " WHERE LEVEL = '7' AND SUBSTRING(idUser,'1','12') = '".$id."0000'";
+			$where = " WHERE LEVEL = '7' AND SUBSTRING(idUser,'1','12') = '".$id."00'";
 		}
 
 		$select = "SELECT MAX(idUser) AS max_id 

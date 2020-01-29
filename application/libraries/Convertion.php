@@ -10,6 +10,8 @@ class Convertion {
             case '3' : return 'Puskesmas'; break;
             case '4' : return 'Dinkes Kabupaten / Kota'; break;
             case '5' : return 'Dinkes Propinsi'; break;
+            case '6' : return 'Camat'; break;
+            case '7' : return 'Lurah'; break;
             default	: return '-'; break;
         }
     }

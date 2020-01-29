@@ -292,23 +292,23 @@
                 $('#lila').focus();
                 return (false);
             }else if(!$('input[name=bb_u]').is(':checked')){
-                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> BB / U Belum Diisi</font>");
+                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> BB/ U Belum Diisi</font>");
                 $('input[name=bb_u]').focus();
                 return (false);
             }else if(!$('input[name=tb_u_pb_u]').is(':checked')){
-                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> TB / U atau PB / U Belum Diisi</font>");
+                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> TB/ U Atau PB/ U Belum Diisi</font>");
                 $('input[name=tb_u_pb_u]').focus();
                 return (false);
             }else if(!$('input[name=bb_tb_bb_pb]').is(':checked')){
-                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> BB / TB Atau BB / PB  Belum Diisi</font>");
+                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> BB/ TB Atau BB/ PB  Belum Diisi</font>");
                 $('input[name=bb_tb_bb_pb]').focus();
                 return (false);
             }else if(!$('input[name=imt_u]').is(':checked')){
-                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> IMT / U  Belum Diisi</font>");
+                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> IMT/ U  Belum Diisi</font>");
                 $('input[name=imt_u]').focus();
                 return (false);
             }else if(!$('input[name=lila_u]').is(':checked')){
-                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> LILA / U *  Belum Diisi</font>");
+                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> LILA/ U *  Belum Diisi</font>");
                 $('input[name=lila_u]').focus();
                 return (false);
             }
@@ -365,7 +365,7 @@
                                 $("#notif_stunting").text(parseInt(notif_stunting)+1);
                                 $.toast({
                                     heading: 'Warning',
-                                    text: 'Balita ini memiliki TB / U Atau PB / U sangat pendek',
+                                    text: 'Balita ini memiliki TB/ U Atau PB/ U sangat pendek',
                                     position: 'top-right',
                                     loaderBg:'#ff6849',
                                     icon: 'error',
@@ -377,7 +377,7 @@
                                 $("#notif_bb_tb_bb_pb").text(parseInt(notif_bb_tb_bb_pb)+1);
                                 $.toast({
                                     heading: 'Warning',
-                                    text: 'Balita ini memiliki BB / TB Atau BB / PB sangat kurus',
+                                    text: 'Balita ini memiliki BB/ TB Atau BB/ PB sangat kurus',
                                     position: 'top-right',
                                     loaderBg:'#ff6849',
                                     icon: 'error',
@@ -389,7 +389,7 @@
                                 $("#notif_imt_u").text(parseInt(notif_imt_u)+1);
                                 $.toast({
                                     heading: 'Warning',
-                                    text: 'Balita ini memiliki IMT / U sangat kurus',
+                                    text: 'Balita ini memiliki IMT/ U sangat kurus',
                                     position: 'top-right',
                                     loaderBg:'#ff6849',
                                     icon: 'error',
@@ -401,7 +401,7 @@
                                 $("#notif_imt_u").text(parseInt(notif_imt_u)+1);
                                 $.toast({
                                     heading: 'Warning',
-                                    text: 'Balita ini memiliki IMT / U sangat gemuk',
+                                    text: 'Balita ini memiliki IMT/ U sangat gemuk',
                                     position: 'top-right',
                                     loaderBg:'#ff6849',
                                     icon: 'error',
@@ -710,7 +710,7 @@
 
                             <div class="row m-t-20">
                                 <div class="col-md-4">
-                                    <label>BB / U * </label>                            
+                                    <label>BB/ U * </label>                            
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">
@@ -738,7 +738,7 @@
 
                             <div class="row m-t-20">
                                 <div class="col-md-4">
-                                    <label>TB / U Atau PB / U *</label>                            
+                                    <label>TB/ U Atau PB/ U *</label>                            
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">
@@ -766,7 +766,7 @@
 
                             <div class="row m-t-20">
                                 <div class="col-md-4">
-                                    <label>BB / TB Atau BB / PB *</label>                            
+                                    <label>BB/ TB Atau BB/ PB *</label>                            
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">
@@ -794,7 +794,7 @@
 
                             <div class="row m-t-20">
                                 <div class="col-md-4">
-                                    <label>IMT / U *</label>                            
+                                    <label>IMT/ U *</label>                            
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">
@@ -827,7 +827,7 @@
 
                             <div class="row m-t-20">
                                 <div class="col-md-4">
-                                    <label>LILA / U *</label>                            
+                                    <label>LILA/ U *</label>                            
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">

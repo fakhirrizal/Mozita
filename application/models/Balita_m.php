@@ -36,8 +36,16 @@ class Balita_m extends CI_Model {
 	}
 
 	public function getBalitaByName($nama_balita = null){
-		if($_SESSION['level'] == '2'){
+		if($_SESSION['level'] == '2' OR $_SESSION['level'] == '3'){
 			$and = " AND SUBSTRING(norm,'1','12') = SUBSTRING('".$_SESSION['idUser']."','1','12') ";
+		}elseif($_SESSION['level'] == '5'){
+			$and = " AND SUBSTRING(norm,'1','2') = SUBSTRING('".$_SESSION['idUser']."','1','2') ";
+		}elseif($_SESSION['level'] == '4'){
+			$and = " AND SUBSTRING(norm,'1','4') = SUBSTRING('".$_SESSION['idUser']."','1','4') ";
+		}elseif($_SESSION['level'] == '6'){
+			$and = " AND SUBSTRING(norm,'1','7') = SUBSTRING('".$_SESSION['idUser']."','1','7') ";
+		}elseif($_SESSION['level'] == '7'){
+			$and = " AND SUBSTRING(norm,'1','10') = SUBSTRING('".$_SESSION['idUser']."','1','10') ";
 		}else{
 			$and = " ";
 		}

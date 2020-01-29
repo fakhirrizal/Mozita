@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Laporan_m extends CI_Model {
 
 	public function getKab(){
-		if($_SESSION['level'] == 2 or $_SESSION['level'] == 4){
+		if($_SESSION['level'] == 2 or $_SESSION['level'] == 4 or $_SESSION['level'] == 6){
 			$where = " WHERE id = SUBSTRING('".$_SESSION['idUser']."','1','4')";
 		}else{
 			$where = " ";
@@ -15,7 +15,7 @@ class Laporan_m extends CI_Model {
 	}
 
 	public function getKec(){
-		if($_SESSION['level'] == 2){
+		if($_SESSION['level'] == 2 OR $_SESSION['level'] == 6){
 			$where = " WHERE id = SUBSTRING('".$_SESSION['idUser']."','1','7')";
 		}else if($_SESSION['level'] == 4){
 			$idkab = $this->getKab()->id;
@@ -44,6 +44,12 @@ class Laporan_m extends CI_Model {
 		$idpusk = $this->getDesa()->idpusk;
 		$select = " SELECT * FROM puskesmas WHERE idpusk = '$idpusk' ";
 		return $this->db->query($select)->row();
+	}
+
+	public function getPuskbyKec(){
+		$where = " WHERE id_kecamatan = SUBSTRING('".$_SESSION['idUser']."','1','7')";
+		$select = " SELECT * FROM puskesmas ".$where;
+		return $this->db->query($select);
 	}
 
 	public function getPosy(){

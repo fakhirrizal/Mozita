@@ -28,13 +28,13 @@ class Status_gizi extends CI_Controller {
                 $data['sub_menu']	= 'Home';
             break;
             case 'bb-tb-bb-pb':
-                $data['judul']	= 'Balita BB / TB Atau BB / PB';
-                $data['menu']	= 'Balita BB / TB Atau BB / PB';
+                $data['judul']	= 'Balita BB/ TB Atau BB/ PB';
+                $data['menu']	= 'Balita BB/ TB Atau BB/ PB';
                 $data['sub_menu']	= 'Home';
             break;
             case 'imt_u':
-                $data['judul']	= 'Balita IMT / U';
-                $data['menu']	= 'Balita IMT / U';
+                $data['judul']	= 'Balita IMT/ U';
+                $data['menu']	= 'Balita IMT/ U';
                 $data['sub_menu']	= 'Home';
             break;
         }
@@ -58,14 +58,14 @@ class Status_gizi extends CI_Controller {
                 $data['sub_menu']	= 'Detail Balita Stunting';
             break;
             case 'bb_tb_bb_pb':
-                $data['judul']	= 'Detail Balita BB / TB Atau BB / PB';
-                $data['menu']	= 'Balita BB / TB Atau BB / PB';
-                $data['sub_menu']	= 'Detail Balita BB / TB Atau BB / PB';
+                $data['judul']	= 'Detail Balita BB/ TB Atau BB/ PB';
+                $data['menu']	= 'Balita BB/ TB Atau BB/ PB';
+                $data['sub_menu']	= 'Detail Balita BB/ TB Atau BB/ PB';
             break;
             case 'imt_u':
-                $data['judul']	= 'Detail Balita IMT / U';
-                $data['menu']	= 'Balita IMT / U';
-                $data['sub_menu']	= 'Detail Balita IMT / U';
+                $data['judul']	= 'Detail Balita IMT/ U';
+                $data['menu']	= 'Balita IMT/ U';
+                $data['sub_menu']	= 'Detail Balita IMT/ U';
             break;
         }
 

@@ -34,6 +34,14 @@ class Puskesmas_m extends CI_Model {
 		return $this->db->query($select);
 	}
 
+	// kodingan baru
+	// public function puskesmasByIdKecamatan($id_kecamatan = null){
+    //     $select = " SELECT puskesmas.*
+    //                 FROM puskesmas
+    //                 WHERE id_kecamatan = '$id_kecamatan'";
+	// 	return $this->db->query($select);
+	// }
+
 	public function max_idpusk($idkab= null){
 
 		$select = "SELECT MAX(idpusk) AS max_id 

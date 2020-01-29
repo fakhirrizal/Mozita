@@ -19,11 +19,11 @@
                                 <th class="text-center">TB</th>
                                 <th class="text-center">PB</th>
                                 <th class="text-center">LILA</th>
-                                <th class="text-center">BB / U</th>
-                                <th class="text-center">TB / U Atau PB / U</th>
-                                <th class="text-center">BB / TB Atau BB / TB</th>
-                                <th class="text-center">IMT / U</th>
-                                <th class="text-center">LILA / U</th>
+                                <th class="text-center">BB/ U</th>
+                                <th class="text-center">TB/ U Atau PB/ U</th>
+                                <th class="text-center">BB/ TB Atau BB/ PB</th>
+                                <th class="text-center">IMT/ U</th>
+                                <th class="text-center">LILA/ U</th>
                                 <th class="text-center">Detail</th>
                             </tr>
                         </thead>

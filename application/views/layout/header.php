@@ -181,12 +181,21 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown" style="padding-top: 7px;">
+                            <?php
+                            $get_data_profil = $this->db->query("SELECT a.* FROM userapp a WHERE a.idUser='".$_SESSION['idUser']."'")->row();
+                            $foto_profil = '';
+                            if(filter_var($get_data_profil->foto, FILTER_VALIDATE_URL) === FALSE){
+                                $foto_profil = base_url('images/default-user.png');
+                            }else{
+                                $foto_profil = $get_data_profil->foto;
+                            }
+                            ?>
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img id="profil_header" src="<?= $_SESSION['foto'] ?>" class="profile-pic" style="float: right; padding-top: 7px;" />
+                                <img id="profil_header" src="<?= $foto_profil; ?>" class="profile-pic" style="float: right; padding-top: 7px;" />
                                 <!-- <i class="mdi mdi-settings"></i> -->
                                 <div style="float: right;padding-top: 15px;padding-right: 10px;">
                                     <div style="line-height: 0px;text-align: right; color: #fff;">
-                                        <?= $_SESSION['nama'] ?>
+                                        <?= $get_data_profil->nama; ?>
                                     </div>
                                 </div>
                             </a>
@@ -194,10 +203,10 @@
                                 <ul class="dropdown-user">
                                     <li>
                                         <div class="dw-user-box">
-                                            <div class="u-img"><img id="profil_sub_header" src="<?= $_SESSION['foto'] ?>"></div>
+                                            <div class="u-img"><img id="profil_sub_header" src="<?= $foto_profil; ?>"></div>
                                             <div class="u-text">
-                                                <h4><?= $_SESSION['nama'] ?></h4>
-                                                <p class="text-muted"><?= $_SESSION['email'] ?></p>
+                                                <h4><?= $get_data_profil->nama; ?></h4>
+                                                <p class="text-muted"><?= $get_data_profil->email; ?></p>
                                             </div>
                                         </div>
                                     </li>
@@ -257,6 +266,8 @@
                                 $this->load->view('menu/level_4');
                             }else if($_SESSION['level'] == 5){
                                 $this->load->view('menu/level_5');
+                            }else if($_SESSION['level'] == 6){
+                                $this->load->view('menu/level_6');
                             }
                         ?>
                                            

@@ -374,6 +374,29 @@
                                 <div class="col-md-5">
                                     <input type="text" id="puskesmas" class="form-control" value="<?= ((isset($data->namapusk))? $data->namapusk:"") ?>" disabled/>
                                 </div>
+                                <!-- kodingan baru
+                                <div class="col-md-5">
+                                    <select id="puskesmas" class="select2 form-control" style="width:100%">
+                                        <option value="">Pilih</option>
+                                        <?php
+                                            if(isset($data_pusk)){
+                                            
+                                                foreach($data_pusk as $rows_pusk){
+                                                    if(isset($data->idpusk)){
+                                                        if($data->idpusk == $rows_pusk->idpusk){
+                                                            $selected = "selected";
+                                                        }else{
+                                                            $selected = "";
+                                                        }
+                                                    }else{
+                                                        $selected = "";
+                                                    }
+                                                    echo '<option value="'.$rows_pusk->idpusk.'" '.$selected.'>'.$rows_pusk->namapusk.'</option>';
+                                                }
+                                            }
+                                        ?>
+                                    </select>
+                                </div> -->
                             </div>
                     <?php   } ?>
                 </div><!-- ./ card-body -->

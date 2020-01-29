@@ -18,13 +18,13 @@
                                 <th class="text-center">LILA</th> -->
                                 <?php
                                     if($this->uri->segment(1) == 'balita-gizi-buruk'){
-                                        echo '<th class="text-center" style="background-color:#ef5350; color:#FFFFFF">BB / U</th>';
+                                        echo '<th class="text-center" style="background-color:#ef5350; color:#FFFFFF">BB/ U</th>';
                                     }else if($this->uri->segment(1) == 'balita-stunting'){
-                                        echo '<th class="text-center" style="background-color:#ef5350; color:#FFFFFF">TB / U Atau PB / U</th>';
+                                        echo '<th class="text-center" style="background-color:#ef5350; color:#FFFFFF">TB/ U Atau PB/ U</th>';
                                     }else if($this->uri->segment(1) == 'balita-bb-tb-atau-bb-pb'){
-                                        echo '<th class="text-center" style="background-color:#ef5350; color:#FFFFFF">BB / TB Atau BB / PB</th>';
+                                        echo '<th class="text-center" style="background-color:#ef5350; color:#FFFFFF">BB/ TB Atau BB/ PB</th>';
                                     }else if($this->uri->segment(1) == 'balita-imt-u'){
-                                        echo '<th class="text-center" style="background-color:#ef5350; color:#FFFFFF">IMT / U</th>';
+                                        echo '<th class="text-center" style="background-color:#ef5350; color:#FFFFFF">IMT/ U</th>';
                                     }
                                 ?>
                                 <th class="text-center">Detail</th>
