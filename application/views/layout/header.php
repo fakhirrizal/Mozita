@@ -268,6 +268,8 @@
                                 $this->load->view('menu/level_5');
                             }else if($_SESSION['level'] == 6){
                                 $this->load->view('menu/level_6');
+                            }else if($_SESSION['level'] == 7){
+                                $this->load->view('menu/level_7');
                             }
                         ?>
                                            

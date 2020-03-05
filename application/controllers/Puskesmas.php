@@ -8,7 +8,7 @@ class Puskesmas extends CI_Controller {
         if(empty($_SESSION['idUser'])){
             redirect(base_url());
         }
-        $this->load->model(array('Propinsi_m','Kabupaten_m','Puskesmas_m','Status_gizi_m'));
+        $this->load->model(array('Propinsi_m','Kabupaten_m','Puskesmas_m','Status_gizi_m','Kecamatan_m'));
         $this->load->library('convertion');
     }
 
@@ -32,7 +32,9 @@ class Puskesmas extends CI_Controller {
             $data['sub_menu']	= 'Detail Data Puskesmas';
             $data['jenis_form'] = "detail";
 
-            $data['data'] = $this->Puskesmas_m->puskesmasById($id)->row();;
+            $data['data'] = $this->Puskesmas_m->puskesmasById($id)->row();
+            $data_master = $this->Puskesmas_m->puskesmasById($id)->row();
+            $data['data_kec'] = $this->Kecamatan_m->get_data($id_kecamatan = null, substr($data_master->idpusk,0,4))->result();
         }else{
             $data['judul']	= 'Tambah Data Puskesmas';
             $data['menu']	= 'Data Puskesmas';
@@ -105,6 +107,7 @@ class Puskesmas extends CI_Controller {
 
         $data = array('idpusk'=>$idpusk,
                       'namapusk'=>$this->input->post("namapusk"),
+                      'id_kecamatan'=>$this->input->post("kecamatan"),
                       'almtpusk'=>$this->input->post("alamat"),
                       'jenis'=>$this->input->post("jenis"),
                       'keppusk'=>$this->input->post("keppusk"),

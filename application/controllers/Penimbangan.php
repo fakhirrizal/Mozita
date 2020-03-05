@@ -174,6 +174,7 @@ class Penimbangan extends CI_Controller {
                       'bb_tb_bb_pb'=>$this->input->post("bb_tb_bb_pb"),
                       'imt_u'=>$this->input->post("imt_u"),
                       'lila_u'=>$this->input->post("lila_u"),
+                      'intervensi'=>$this->input->post("intervensi"),
                       'iduser'=>$_SESSION['idUser']);
         
         $this->Penimbangan_m->save($data, $id, $tglPenimbangan);

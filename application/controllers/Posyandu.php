@@ -86,25 +86,27 @@ class Posyandu extends CI_Controller {
                 echo $list;
             break;
             case 'puskesmas':
-                $split_id = explode("-",$id);
-                $idpusk = end($split_id);
-                $data = $this->Puskesmas_m->puskesmasById(MD5($idpusk))->row();
-                if(!empty($data)){
-                    echo $data->namapusk;
-                }else{
-                    echo "";
-                }
+                // $split_id = explode("-",$id);
+                // $idpusk = end($split_id);
+                // $data = $this->Puskesmas_m->puskesmasById(MD5($idpusk))->row();
+                // if(!empty($data)){
+                //     echo $data->namapusk;
+                // }else{
+                //     echo "";
+                // }
 
                 // kodingan baru
-                // $where = substr($id,0,7);
+                $where = substr($id,0,7);
                 // $data = $this->Puskesmas_m->puskesmasByIdKecamatan($where)->result();
+                $data = $this->db->query("SELECT a.* FROM puskesmas a WHERE a.id_kecamatan='".$where."'")->result();
 
-                // $list = '<option value="">Pilih</option>';
-                // if(!empty($data)){
-                //     foreach ($data as $rows) {
-                //         $list .= '<option value="'.$rows->idpusk.'">'.$rows->namapusk.'</option>';
-                //     }
-                // }
+                $list = '<option value="">Pilih</option>';
+                if(!empty($data)){
+                    foreach ($data as $rows) {
+                        $list .= '<option value="'.$rows->idpusk.'">'.$rows->namapusk.'</option>';
+                    }
+                }
+                echo $list;
             break;
         }
     }
@@ -181,6 +183,7 @@ class Posyandu extends CI_Controller {
         
 
         $data = array('idpos'=>$idPosyandu,
+                      'idpusk'=>$this->input->post("idpusk"),
                       'namapos'=>$this->input->post("namapos"),
                       'alamatpos'=>$this->input->post("alamat"),
                       'rt'=>$this->input->post("rt"),

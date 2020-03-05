@@ -2,7 +2,27 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Posyandu_m extends CI_Model {
-
+	// kodingan lama
+	// public function posyanduById($idpos = null){
+    //     $select = " SELECT posyandu.*,
+	// 					   desa.id AS id_desa,
+	// 					   kec.id AS id_kec,
+	// 					   kab.id AS id_kab,
+	// 					   propinsi.id AS id_prop,
+	// 					   puskesmas.idpusk AS id_pusk,
+	// 					   puskesmas.namapusk
+	// 				FROM posyandu
+	// 				JOIN desa ON desa.id = posyandu.desa_id
+	// 				JOIN kec ON kec.id = desa.district_id
+	// 				JOIN kab ON kab.id = kec.regency_id
+	// 				JOIN propinsi ON propinsi.id = kab.province_id
+	// 				JOIN puskesmas ON puskesmas.idpusk = desa.idpusk
+	// 				WHERE propinsi.id = '".$_SESSION['kode_propinsi']."'
+	// 				  AND posyandu.flag = '0'
+	// 				  AND MD5(posyandu.idpos) = '$idpos'";
+	// 	return $this->db->query($select)->row();
+	// }
+	// kodingan baru
 	public function posyanduById($idpos = null){
         $select = " SELECT posyandu.*,
 						   desa.id AS id_desa,
@@ -16,7 +36,7 @@ class Posyandu_m extends CI_Model {
 					JOIN kec ON kec.id = desa.district_id
 					JOIN kab ON kab.id = kec.regency_id
 					JOIN propinsi ON propinsi.id = kab.province_id
-					JOIN puskesmas ON puskesmas.idpusk = desa.idpusk
+					JOIN puskesmas ON puskesmas.idpusk = posyandu.idpusk
 					WHERE propinsi.id = '".$_SESSION['kode_propinsi']."'
 					  AND posyandu.flag = '0'
 					  AND MD5(posyandu.idpos) = '$idpos'";
@@ -37,7 +57,22 @@ class Posyandu_m extends CI_Model {
 			$id_puskesmas = substr($_SESSION['idUser'],0,7);
 			$this->db->where("desa.idpusk = '$id_puskesmas'");
 		}
-
+		// kodingan lama
+		// $this->db->select("posyandu.*,
+		// 				   desa.name AS desa,
+		// 				   kec.name AS kecamatan,
+		// 				   kab.name AS kabupaten,
+		// 				   propinsi.name AS propinsi,
+		// 				   puskesmas.namapusk AS puskesmas")
+		// 		 ->join("desa", "desa.id = posyandu.desa_id")
+		// 		 ->join("kec", "kec.id = desa.district_id")
+		// 		 ->join("kab", "kab.id = kec.regency_id")
+		// 		 ->join("propinsi", "propinsi.id = kab.province_id")
+		// 		 ->join("puskesmas", "puskesmas.idpusk = desa.idpusk")
+		// 		 ->where("propinsi.id = '".$_SESSION['kode_propinsi']."'")
+		// 		 ->where("posyandu.flag = '0'")
+		// 		 ->from("posyandu");
+		// kodingan baru
 		$this->db->select("posyandu.*,
 						   desa.name AS desa,
 						   kec.name AS kecamatan,
@@ -48,7 +83,7 @@ class Posyandu_m extends CI_Model {
 				 ->join("kec", "kec.id = desa.district_id")
 				 ->join("kab", "kab.id = kec.regency_id")
 				 ->join("propinsi", "propinsi.id = kab.province_id")
-				 ->join("puskesmas", "puskesmas.idpusk = desa.idpusk")
+				 ->join("puskesmas", "puskesmas.idpusk = posyandu.idpusk")
 				 ->where("propinsi.id = '".$_SESSION['kode_propinsi']."'")
 				 ->where("posyandu.flag = '0'")
 				 ->from("posyandu");

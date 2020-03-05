@@ -17,6 +17,7 @@
             $("#form_input input[type=text]").prop("disabled",true);
             $("#alamat").prop("disabled",true);
             $('#kabupaten').select2().prop("disabled",true);
+            $('#kecamatan').select2().prop("disabled",true);
         }
     });
 </script>
@@ -33,6 +34,7 @@
             $("#form_input input[type=text]").val('');
             $("#alamat").val("");
             $('#kabupaten').select2("val","0");
+            $('#kecamatan').select2("val","0");
             $('.btn_save').show();
             $('#btn_new_input').hide();
             $('#validasi').hide();
@@ -49,6 +51,7 @@
             $("#form_input input[type=text]").prop("disabled",false);
             $("#alamat").prop("disabled",false);
             $('#kabupaten').select2().prop("disabled",false);
+            $('#kecamatan').select2().prop("disabled",false);
         });
 
         $(document).on('click','#btn_cancel', function(){
@@ -67,6 +70,14 @@
             $('#kabupaten').select2().prop("disabled",true);
             $('#kecamatan').select2().prop("disabled",true);
             $('#desa').select2().prop("disabled",true);
+        });
+
+        $(document).on('change','#kabupaten', function(){
+            var id = $("#kabupaten").val();
+            $.post("<?= site_url('posyandu/combobox/kecamatan/') ?>"+id,{id_kab:id}, function(result){
+                $("#kecamatan").html(result);
+                $('.select2').select2();
+            });
         });
     });
 </script>
@@ -115,6 +126,10 @@
                 $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> Kabupaten Belum Diisi</font>");
                 $('#kabupaten').focus();
                 return (false);
+            }else if($('#kecamatan').val() == "0"){
+                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> Kecamatan Belum Diisi</font>");
+                $('#kecamatan').focus();
+                return (false);
             }
 
             $('.btn_save').prop('disabled',true);
@@ -131,6 +146,7 @@
                         '&alamat='+$('#alamat').val()+
                         '&propinsi='+$('#propinsi').val()+
                         '&kabupaten='+$('#kabupaten').val()+
+                        '&kecamatan='+$('#kecamatan').val()+
                         '&idpusk='+$('#idpusk').val();
             
             $.ajax({
@@ -158,6 +174,7 @@
                             $("#form_input input[type=text]").prop("disabled",true);
                             $("#alamat").prop("disabled",true);
                             $('#kabupaten').select2().prop("disabled",true);
+                            $('#kecamatan').select2().prop("disabled",true);
                         }                         
                     }
                     $('#validasi').html(result['message']);
@@ -288,6 +305,24 @@
                                     }
                                     foreach($data_kab as $rows_kab){
                                         echo '<option value="'.$rows_kab->id.'" '.(($id_kab == $rows_kab->id)?"selected":"").'>'.$rows_kab->name.'</option>';
+                                    }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row m-t-20">
+                        <div class="col-md-3">
+                            <label>Kecamatan *<?= substr($data->idpusk,0,4); ?></label>
+                        </div>
+                        <div class="col-md-5">
+                            <select id="kecamatan" class="select2 form-control" style="width:100%" required>
+                                <option value="0">Pilih</option>
+                                <?php
+                                    if(isset($data->id_kecamatan)){
+                                        foreach($data_kec as $rows_kec){
+                                            echo '<option value="'.$rows_kec->id.'" '.(($data->id_kecamatan == $rows_kec->id)?"selected":"").'>'.$rows_kec->name.'</option>';
+                                        }
                                     }
                                 ?>
                             </select>

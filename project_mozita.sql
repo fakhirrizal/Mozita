@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 17 Nov 2019 pada 16.04
+-- Generation Time: 30 Jan 2020 pada 05.46
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -30,7 +30,7 @@ CREATE TABLE `balita` (
   `norm` varchar(17) NOT NULL,
   `nama` varchar(75) NOT NULL,
   `tgllahir` varchar(15) NOT NULL,
-  `jenkel` enum('Laki-laki','Perempuan','','') NOT NULL,
+  `jenkel` enum('Laki-laki','Perempuan') NOT NULL,
   `nmortu` varchar(75) NOT NULL,
   `nikortu` varchar(20) NOT NULL,
   `wa_ortu` text,
@@ -50,23 +50,11 @@ CREATE TABLE `balita` (
 --
 
 INSERT INTO `balita` (`norm`, `nama`, `tgllahir`, `jenkel`, `nmortu`, `nikortu`, `wa_ortu`, `gakin`, `fotobayi`, `lat`, `lng`, `tglInput`, `kms`, `aktif`, `userInput`, `flag`) VALUES
-('337404000101008', 'Marsha Jr', '19-09-2016', 'Laki-laki', 'Luke Shaw', '134646879', '+62 896-7639-1780', 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000102/201808/33999999999999920180819180408.png', '-6.981495893293304', '110', '2018-08-19 16:51:19', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000101007', 'Ferel jr', '21-08-2017', 'Laki-laki', 'Ferel', '123456', NULL, 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000701/201808/33999999999999920180821070600.jpg', NULL, NULL, '2018-08-21 05:06:41', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000101001', 'BaraJr', '24-08-2015', 'Laki-laki', 'Bara', '345790876578', NULL, 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000106/201808/33999999999999920180824131352.png', NULL, NULL, '2018-08-24 11:13:52', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000101002', 'Cestin Junior', '02-01-2015', 'Laki-laki', 'Cestin', '234567898767', NULL, 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000101/201808/33999999999999920180825152054.jpg', NULL, NULL, '2018-08-25 13:20:54', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000101003', 'Timoti Jr', '11-02-2015', 'Laki-laki', 'Timoti', '23456789765', NULL, 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000101/201808/33999999999999920180825152157.jpg', NULL, NULL, '2018-08-25 13:21:57', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000101004', 'Nadira ', '16-02-2016', 'Perempuan', 'nadira', '2345678867867', NULL, 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000101/201808/33999999999999920180825152319.jpg', NULL, NULL, '2018-08-25 13:23:19', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000101005', 'Naura', '12-07-2016', 'Perempuan', 'Patimura', '8237698876757', NULL, 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000101/201808/33999999999999920180825152435.png', NULL, NULL, '2018-08-25 13:24:35', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000101006', 'Abdul muis', '10-10-2016', 'Laki-laki', 'patimura', '2345678865', NULL, 'Ya', 'http://localhost/project/mozita/uploads/balita/337404000101/201808/33999999999999920180825152532.jpg', NULL, NULL, '2018-08-25 13:25:32', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000101009', 'alisa', '13-10-2016', 'Perempuan', 'Fia', '23456787657', NULL, 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000101/201808/33999999999999920180825155158.jpg', NULL, NULL, '2018-08-25 13:51:58', 'Tidak', 'Ya', '339999999999999', '0'),
-('337404000101010', 'bisma', '27-12-2017', 'Laki-laki', 'orin', '2345678767', NULL, 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000102/201808/33999999999999920180825155354.jpg', NULL, NULL, '2018-08-25 13:53:54', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000102001', 'keke', '20-06-2015', 'Perempuan', 'jumadi', '3456789874', NULL, 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000102/201808/33999999999999920180826173553.jpg', NULL, NULL, '2018-08-26 15:35:53', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000102002', 'desi', '17-11-2015', 'Perempuan', 'murti', '76898789', NULL, 'Ya', 'http://localhost/project/mozita/uploads/balita/337404000102/201808/33999999999999920180826173707.jpg', NULL, NULL, '2018-08-26 15:37:07', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000102003', 'bagus', '17-02-2016', 'Laki-laki', 'suryo', '4567899879', NULL, 'Ya', 'http://localhost/project/mozita/uploads/balita/337404000102/201808/33999999999999920180826173815.jpg', NULL, NULL, '2018-08-26 15:38:15', 'Ya', 'Ya', '339999999999999', '0'),
-('33740400010718001', 'balita1', '30-08-2018', 'Laki-laki', 'oranga tua balita', '23456787', NULL, 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000101/201808/33999999999999920180830073022.jpg', NULL, NULL, '2018-08-30 05:30:22', 'Ya', 'Ya', '339999999999999', '0'),
-('33740400010718002', 'balita 3', '30-08-2018', 'Perempuan', 'ortu balita 3', '21345679', NULL, 'Tidak', '', NULL, NULL, '2018-08-30 14:07:24', 'Ya', 'Ya', '337404000107991', '0'),
-('33740400010518001', 'roy', '30-08-2018', 'Laki-laki', 'roy suryo', '12347', '+62 896-7639-1780', 'Ya', 'http://localhost/project/mozita/uploads/balita/337404000105/201808/33999999999999920180830164348.jpg', '-6.982859', '110.40947499999993', '2018-08-30 14:43:48', 'Ya', 'Ya', '339999999999999', '0'),
-('33740400010518002', '', '', 'Perempuan', '', '', NULL, 'Tidak', 'http://localhost/project/mozita/uploads/balita/337404000105/201808/33999999999999920180830164448.jpg', NULL, NULL, '2018-08-30 14:44:48', 'Ya', 'Ya', '339999999999999', '0');
+('33251100190020001', 'Nama Baru', '01-01-2019', 'Laki-laki', 'Ayah', '53648640684', '085696303627', 'Ya', '', '-6.90969890359195', '109.73454102257492', '2020-01-18 16:40:08', 'Ya', 'Ya', '339999999999999', '0'),
+('337404000101008', 'Misik Puspajati Nurmajid', '19-09-2016', 'Perempuan', 'Sugiharto', '134646879', '+62 896-7639-1780', 'Tidak', 'http://localhost:8080/mozita/uploads/balita/337404000101/202001/33999999999999920200106165212.png', '-6.981495893293304', '110', '2018-08-19 16:51:19', 'Ya', 'Ya', '339999999999999', '0'),
+('33740400010518001', 'Rudi Kurniawan', '30-08-2018', 'Laki-laki', 'Roy Suryo', '12347', '+62 896-7639-1780', 'Ya', 'http://localhost:8080/mozita/uploads/balita/337404000105/202001/33999999999999920200106164821.png', '-6.982859', '110.40947499999993', '2018-08-30 14:43:48', 'Ya', 'Ya', '339999999999999', '0'),
+('33740400010518002', 'Anisa Rossy Rahmatika', '14-11-2018', 'Perempuan', 'Budi Gunawan', '23423409823', '', 'Tidak', 'http://localhost:8080/mozita/uploads/balita/337404000105/202001/33999999999999920200106165159.png', '-6.982859', '110.40947499999993', '2018-08-30 14:44:48', 'Ya', 'Ya', '339999999999999', '0'),
+('33740400010718002', 'Riyan Apriyanto', '30-08-2018', 'Perempuan', 'Budi Ariel', '21345679', '', 'Tidak', '', '-6.982859', '110.40947499999993', '2018-08-30 14:07:24', 'Ya', 'Ya', '339999999999999', '0');
 
 -- --------------------------------------------------------
 
@@ -9354,6 +9342,7 @@ CREATE TABLE `penimbangan` (
   `bb_tb_bb_pb` enum('Kurus','Normal','Sangat Kurus','') NOT NULL,
   `imt_u` enum('Kurus','Normal','Gemuk','Sangat Kurus','Obesitas') NOT NULL,
   `lila_u` enum('<11.5 cm','>11.5 cm','','') NOT NULL,
+  `intervensi` text,
   `iduser` varchar(15) NOT NULL,
   `tgljamentry` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `baca` varchar(20) NOT NULL
@@ -9363,19 +9352,11 @@ CREATE TABLE `penimbangan` (
 -- Dumping data untuk tabel `penimbangan`
 --
 
-INSERT INTO `penimbangan` (`norm`, `umurbayi`, `tglpenimbangan`, `bb`, `tb`, `pb`, `lila`, `bb_u`, `tb_u_pb_u`, `bb_tb_bb_pb`, `imt_u`, `lila_u`, `iduser`, `tgljamentry`, `baca`) VALUES
-('337404000101008', '18', '2018-01-25', '17', '50', '6', '25', 'Buruk', 'Normal', 'Normal', 'Normal', '>11.5 cm', '339999999999999', '2018-08-29 21:51:48', '1,2,3'),
-('337404000101008', '19', '2018-02-25', '30', '90', '13', '50', 'Buruk', 'Normal', 'Normal', 'Normal', '>11.5 cm', '339999999999999', '2018-08-29 21:51:48', '1,2,3'),
-('337404000101008', '20', '2018-03-25', '21', '600', '8', '30', 'Buruk', 'Normal', 'Normal', 'Normal', '>11.5 cm', '339999999999999', '2018-08-29 21:51:48', '1,2,3'),
-('337404000101008', '21', '2018-04-25', '25', '70', '10', '40', 'Buruk', 'Normal', 'Normal', 'Normal', '>11.5 cm', '339999999999999', '2018-08-29 21:51:48', '1,2,3'),
-('337404000101008', '22', '2018-05-25', '30', '90', '13', '50', 'Buruk', 'Normal', 'Normal', 'Normal', '>11.5 cm', '339999999999999', '2018-08-29 21:51:48', '1,2,3'),
-('337404000101008', '23', '2018-06-25', '37', '100', '15', '57', 'Buruk', 'Normal', 'Normal', 'Normal', '>11.5 cm', '339999999999999', '2018-08-29 21:51:48', '1,2,3'),
-('337404000101008', '24', '2018-07-25', '40', '110', '18', '60', 'Buruk', 'Normal', 'Normal', 'Normal', '>11.5 cm', '339999999999999', '2018-08-29 21:51:48', '1,2,3'),
-('337404000101008', '25', '2018-08-25', '40', '120', '20', '70', 'Buruk', 'Normal', 'Normal', 'Normal', '>11.5 cm', '339999999999999', '2018-08-29 21:51:48', '1,2,3'),
-('337404000101008', '26', '2018-09-05', '45', '125', '25', '75', 'Buruk', 'Sangat Pendek', 'Sangat Kurus', 'Sangat Kurus', '<11.5 cm', '339999999999999', '2018-09-04 22:08:39', ''),
-('337404000101008', '27', '2018-10-25', '48', '130', '29', '79', 'Buruk', 'Normal', 'Normal', 'Normal', '>11.5 cm', '339999999999999', '2018-08-29 21:51:48', '1,2,3'),
-('337404000101008', '28', '2018-11-25', '45', '97', '13', '80', 'Buruk', 'Normal', 'Normal', 'Normal', '>11.5 cm', '339999999999999', '2018-08-29 21:51:48', '1,2,3'),
-('337404000101008', '29', '2018-12-25', '30', '90', '13', '50', 'Buruk', 'Normal', 'Normal', 'Normal', '>11.5 cm', '339999999999999', '2018-08-29 21:51:48', '1,2,3');
+INSERT INTO `penimbangan` (`norm`, `umurbayi`, `tglpenimbangan`, `bb`, `tb`, `pb`, `lila`, `bb_u`, `tb_u_pb_u`, `bb_tb_bb_pb`, `imt_u`, `lila_u`, `intervensi`, `iduser`, `tgljamentry`, `baca`) VALUES
+('337404000101008', '41', '2020-01-19', '3', '45', '40', '30', 'Buruk', 'Sangat Pendek', 'Sangat Kurus', 'Sangat Kurus', '>11.5 cm', '[value-16]', '339999999999999', '2020-01-29 15:06:41', '1'),
+('337404000101008', '40', '2019-12-01', '30', '58', '48', '45', '', 'Sangat Pendek', 'Sangat Kurus', 'Kurus', '>11.5 cm', NULL, '339999999999999', '2020-01-19 11:06:28', ''),
+('33740400010518002', '15', '2020-01-29', '30', '88', '67', '50', '', 'Sangat Pendek', 'Sangat Kurus', 'Sangat Kurus', '>11.5 cm', NULL, '339999999999999', '2020-01-29 15:10:28', ''),
+('33740400010518001', '18', '2020-01-29', '37', '97', '67', '55', '', 'Sangat Pendek', 'Sangat Kurus', 'Sangat Kurus', '>11.5 cm', 'Aduh', '339999999999999', '2020-01-29 15:13:21', '');
 
 -- --------------------------------------------------------
 
@@ -9400,6 +9381,7 @@ CREATE TABLE `posyandu` (
 --
 
 INSERT INTO `posyandu` (`idpos`, `namapos`, `alamatpos`, `rt`, `rw`, `desa_id`, `tglInput`, `idUser`, `flag`) VALUES
+('332511001900', 'Tes', 'Proyonanggan Tengah', '003', '001', '3325110019', '2020-01-18 16:37:45', '', '0'),
 ('337404000101', 'ANGGRAINI', '', 'RW I', '001', '3374040001', '2018-08-17 03:49:53', '', '0'),
 ('337404000102', 'WIJAYA KUSUMA', '', 'RW II', '002', '3374040001', '2018-08-17 03:49:53', '', '0'),
 ('337404000103', 'PUSPITASARI', '', 'RW II', '003', '3374040001', '2018-08-17 03:49:53', '', '0'),
@@ -9407,6 +9389,18 @@ INSERT INTO `posyandu` (`idpos`, `namapos`, `alamatpos`, `rt`, `rw`, `desa_id`, 
 ('337404000105', 'MELATI', '', 'RW V', '005', '3374040001', '2018-08-17 03:49:53', '', '0'),
 ('337404000106', 'TUNAS BANGSA', '', 'RW VI', '006', '3374040001', '2018-08-17 03:49:53', '', '0'),
 ('337404000107', 'SAPTA BHAKTI HUSADA', '', 'RW VI', '007', '3374040001', '2018-08-17 03:49:53', '', '0'),
+('337404000201', 'BOUGENVILE', '', 'RW I', '001', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('337404000202', 'MELATI', '', 'RW II', '002', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('337404000203', 'LILY', '', 'RW II', '003', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('337404000204', 'SEJAHTERA', '', 'RW IV', '004', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('337404000205', 'HARAPAN BUNDA', '', 'RW V', '005', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('337404000206', 'PERMATA BUNDA', '', 'RW VI', '007', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('337404000301', 'TERATAI', '', 'RW I', '001', '3374040003', '2018-08-17 03:49:53', '', '0'),
+('337404000302', 'SEJAHTERA', '', 'RW II', '002', '3374040003', '2018-08-17 03:49:53', '', '0'),
+('337404000303', 'MELATI', '', 'RW II', '003', '3374040003', '2018-08-17 03:49:53', '', '0'),
+('337404000304', 'DAHLIA', '', 'RW IV', '004', '3374040003', '2018-08-17 03:49:53', '', '0'),
+('337404000305', 'KENANGA', '', 'RW V', '005', '3374040003', '2018-08-17 03:49:53', '', '0'),
+('337404000306', 'MAWAR', '', 'RW VI', '006', '3374040003', '2018-08-17 03:49:53', '', '0'),
 ('337404000401', 'CEMPAKA', '', 'RW II', '002', '3374040004', '2018-08-17 03:49:53', '', '0'),
 ('337404000402', 'ANGGREK', '', 'RW II', '003', '3374040004', '2018-08-17 03:49:53', '', '0'),
 ('337404000403', 'MELATI', '', 'RW IV', '004', '3374040004', '2018-08-17 03:49:53', '', '0'),
@@ -9420,18 +9414,6 @@ INSERT INTO `posyandu` (`idpos`, `namapos`, `alamatpos`, `rt`, `rw`, `desa_id`, 
 ('337404000503', 'KENANGA', '', 'RW II', '003', '3374040005', '2018-08-17 03:49:53', '', '0'),
 ('337404000504', 'DAHLIA', '', 'RW VI', '004', '3374040005', '2018-08-17 03:49:53', '', '0'),
 ('337404000505', 'MAWAR ', '', 'RW V', '005', '3374040005', '2018-08-17 03:49:53', '', '0'),
-('337404000201', 'BOUGENVILE', '', 'RW I', '001', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000202', 'MELATI', '', 'RW II', '002', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000203', 'LILY', '', 'RW II', '003', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000204', 'SEJAHTERA', '', 'RW IV', '004', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000205', 'HARAPAN BUNDA', '', 'RW V', '005', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000206', 'PERMATA BUNDA', '', 'RW VI', '007', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000801', 'NUSA INDAH', '', 'RW I ', '001', '3374040008', '2018-08-17 03:49:53', '', '0'),
-('337404000802', 'MELATI', '', 'RW II', '002', '3374040008', '2018-08-17 03:49:53', '', '0'),
-('337404000803', 'MAWAR', '', 'RW II', '003', '3374040008', '2018-08-17 03:49:53', '', '0'),
-('337404000804', 'DAHLIA', '', 'RW IV', '004', '3374040008', '2018-08-17 03:49:53', '', '0'),
-('337404000805', 'KEMBANG SEPATU', '', 'RW V', '005', '3374040008', '2018-08-17 03:49:53', '', '0'),
-('337404000806', 'CEMPAKA', '', 'RW VI', '006', '3374040008', '2018-08-17 03:49:53', '', '0'),
 ('337404000601', 'MELATI I', '', 'RW I', '001', '3374040006', '2018-08-17 03:49:53', '', '0'),
 ('337404000602', 'MELATI II', '', 'RW II', '002', '3374040006', '2018-08-17 03:49:53', '', '0'),
 ('337404000603', 'MELATI III', '', 'RW II', '003', '3374040006', '2018-08-17 03:49:53', '', '0'),
@@ -9442,15 +9424,12 @@ INSERT INTO `posyandu` (`idpos`, `namapos`, `alamatpos`, `rt`, `rw`, `desa_id`, 
 ('337404000703', 'SERUNI', '', 'RW II', '003', '3374040007', '2018-08-17 03:49:53', '', '0'),
 ('337404000704', 'MAWAR', '', 'RW IV', '004', '3374040007', '2018-08-17 03:49:53', '', '0'),
 ('337404000705', 'RAHAYU V', '', 'RW V', '005', '3374040007', '2018-08-17 03:49:53', '', '0'),
-('337404000301', 'TERATAI', '', 'RW I', '001', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000302', 'SEJAHTERA', '', 'RW II', '002', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000303', 'MELATI', '', 'RW II', '003', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000304', 'DAHLIA', '', 'RW IV', '004', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000305', 'KENANGA', '', 'RW V', '005', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000306', 'MAWAR', '', 'RW VI', '006', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000108', 'psyandu', 'semarang', '002', '004', '3374040001', '2018-08-21 04:52:10', '', '0'),
-('337404000109', 'tester posyandu', 'jl mawar melati', '001', '002', '3374040001', '2018-08-30 15:19:34', '', '0'),
-('337404000409', 'Tester posyandu2', 'jalan mawar melati', '003', '001', '3374040004', '2018-08-30 15:43:01', '', '0');
+('337404000801', 'NUSA INDAH', '', 'RW I ', '001', '3374040008', '2018-08-17 03:49:53', '', '0'),
+('337404000802', 'MELATI', '', 'RW II', '002', '3374040008', '2018-08-17 03:49:53', '', '0'),
+('337404000803', 'MAWAR', '', 'RW II', '003', '3374040008', '2018-08-17 03:49:53', '', '0'),
+('337404000804', 'DAHLIA', '', 'RW IV', '004', '3374040008', '2018-08-17 03:49:53', '', '0'),
+('337404000805', 'KEMBANG SEPATU', '', 'RW V', '005', '3374040008', '2018-08-17 03:49:53', '', '0'),
+('337404000806', 'CEMPAKA', '', 'RW VI', '006', '3374040008', '2018-08-17 03:49:53', '', '0');
 
 -- --------------------------------------------------------
 
@@ -9479,6 +9458,7 @@ INSERT INTO `propinsi` (`id`, `name`) VALUES
 CREATE TABLE `puskesmas` (
   `idpusk` varchar(7) NOT NULL,
   `namapusk` varchar(35) NOT NULL,
+  `id_kecamatan` char(7) NOT NULL,
   `almtpusk` varchar(100) NOT NULL,
   `jenis` varchar(30) NOT NULL,
   `keppusk` varchar(50) NOT NULL,
@@ -9494,44 +9474,47 @@ CREATE TABLE `puskesmas` (
 -- Dumping data untuk tabel `puskesmas`
 --
 
-INSERT INTO `puskesmas` (`idpusk`, `namapusk`, `almtpusk`, `jenis`, `keppusk`, `nipkep`, `nutripusk`, `nipnutri`, `flag`, `userInput`, `tglInput`) VALUES
-('3374001', 'MIJEN', 'Ds. Mijen, Kec. Mijen', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374002', 'KARANG MALANG', 'Jl. Karang Malang, Kec. Mijen', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374003', 'GUNUNG PATI', 'Jl. Raya Gunung Pati, Kec. Gunung Pati', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374004', 'SEKARAN', 'Ds. Sekaran, Kec. Gunung Pati', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374005', 'SRONDOL', 'Jl. Setiabudi No.209, Ds. Srondol, Kec. Banyumanik', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374006', 'NGESREP', 'Jl. Teuku Umar 271, Ds. Ngesrep, Kec. Banyumanik', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374007', 'PADANG SARI', 'Jl. Meranti Raya 389, Ds. Padang Sari, Kec. Banyumanik', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374008', 'PUNDAKPAYUNG', 'Jl. Perintis Kemerdekaan, Kec. Banyumanik', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374009', 'PEGANDAN', 'Jl. Kendeng Barat III/2, Kec. Gajah Mungkur', 'Non Perawatan', 'Sri Ani Handayani, SKM, M.Kes', '1971094141995022003', 'Putri Prihati Sih', '197810072002122007', '0', '', '2018-08-24 08:08:58'),
-('3374010', 'PANDANARAN', 'Jl. Pandanaran 79, Kec. Semarang Selatan', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374011', 'LAMPER TENGAH', 'Jl. Kel. Lemper Tengah Gg.VII, Kec. Semarang Selatan', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374012', 'CANDILAMA', 'Jl. Wahidin 22, Kec. Candisari', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374013', 'KAGOK', 'Jl. Telomoyo 3, Kec. Candisari', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374014', 'KEDUNG MUNDU', 'Jl. Sambiroto 1, Kec. Tambalang', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374015', 'ROWOSARI', 'Ds. Rowosari, Kec. Tambalang', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374016', 'TELOGOSARI KULON', 'Jl. Taman Satrio Manah 2, Ds. Telogosari Kulon, Kec. Pedurungan', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374017', 'TELOGOSARI WETAN', 'Ds. Telogosari Wetan, Kec. Pedurungan', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374018', 'GENUK', 'Jl. Genuksari, Kec. Genuk', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374019', 'BANGET AYU', 'Jl. Raya Bangetayu, Kec. Genuk', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374020', 'GAYAM SARI', 'Jl. Slamet Riyadi, Kel. Gayamsari, Kec. Gayamsari', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374021', 'HALMAHERA', 'Jl. Halmahera Raya 38, Kec. Semarang Timur', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374022', 'KARANG DORO', 'Jl. Raden Patah 178, Kec. Semarang Timur', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374023', 'BUGANGAN', 'Jl. Cilosari, Kec. Semarang Timur', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374024', 'BANDARHARJO', 'Jl. Cumi Cumi Raya, Kec. Semarang Utara', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374025', 'BULU LOR', 'Jl. Bonowati Selatan II, Kec. Semarang Utara', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374026', 'PONCOL', 'Jl. Imam Bonjol 114, Kec. Semarang Tengah', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374027', 'MIROTO', 'Ds. Miroto, Kec. Semarang Tengah', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374028', 'KARANG AYU', 'Jl. Kencowungu III/28, Kec. Semarang Barat', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374029', 'LEBDOSARI', 'Jl. Taman Lebdosari, Kec. Semarang Barat', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374030', 'MANYARAN', 'Jl. Abdulrahman Saleh 267, Ds. Manyaran, Kec. Semarang Barat', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374031', 'KROBOKAN', 'Jl. Ari Buana I/XIII, Kec. Semarang Barat', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374032', 'NGEMPLAK SIMONGAN', 'Jl. Srinindito 48/11,, Ds. Ngemplaksimongan, Kec. Semarang Barat', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374033', 'MANGKANG', 'Jl. Raya Mangkang, Kec. Tugu', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374034', 'KARANG ANYAR', 'Jl. Karang Anyar, Kec. Tugu', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374035', 'NGALIAN', 'Jl. Wismasari, Kec. Ngalian', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374036', 'TAMBAK AJI', 'Jl. Raya Wahsongo, Ds. Tambak Aji, Kec. Ngaliyan', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374037', 'PURWOYOSO', 'Jl. Jenderal Sudirman, Ds. Purwoyoso, Kec. Ngaliyan', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58');
+INSERT INTO `puskesmas` (`idpusk`, `namapusk`, `id_kecamatan`, `almtpusk`, `jenis`, `keppusk`, `nipkep`, `nutripusk`, `nipnutri`, `flag`, `userInput`, `tglInput`) VALUES
+('3325001', 'BATANG I', '3325110', 'Jl. Dr.Cipto No.34, Kertonegoran, Proyonanggan Tengah, Kec. Batang', '', '', '', '', '', '0', '', '2020-01-18 15:15:48'),
+('3325002', 'Tes Lagi', '3325050', '-', 'Mandiri', 'Bu A', '123', 'Bu B', '4321', '0', '', '2020-01-29 15:35:41'),
+('3374001', 'MIJEN', '3374010', 'Ds. Mijen, Kec. Mijen', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374002', 'KARANG MALANG', '3374010', 'Jl. Karang Malang, Kec. Mijen', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374003', 'GUNUNG PATI', '3374020', 'Jl. Raya Gunung Pati, Kec. Gunung Pati', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374004', 'SEKARAN', '3374020', 'Ds. Sekaran, Kec. Gunung Pati', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374005', 'SRONDOL', '3374030', 'Jl. Setiabudi No.209, Ds. Srondol, Kec. Banyumanik', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374006', 'NGESREP', '3374030', 'Jl. Teuku Umar 271, Ds. Ngesrep, Kec. Banyumanik', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374007', 'PADANG SARI', '3374030', 'Jl. Meranti Raya 389, Ds. Padang Sari, Kec. Banyumanik', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374008', 'PUNDAKPAYUNG', '3374030', 'Jl. Perintis Kemerdekaan, Kec. Banyumanik', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374009', 'PEGANDAN', '3374040', 'Jl. Kendeng Barat III/2, Kec. Gajah Mungkur', 'Non Perawatan', 'Sri Ani Handayani, SKM, M.Kes', '1971094141995022003', 'Putri Prihati Sih', '197810072002122007', '0', '', '2018-08-24 08:08:58'),
+('3374010', 'PANDANARAN', '3374050', 'Jl. Pandanaran 79, Kec. Semarang Selatan', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374011', 'LAMPER TENGAH', '3374050', 'Jl. Kel. Lemper Tengah Gg.VII, Kec. Semarang Selatan', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374012', 'CANDILAMA', '3374060', 'Jl. Wahidin 22, Kec. Candisari', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374013', 'KAGOK', '3374060', 'Jl. Telomoyo 3, Kec. Candisari', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374014', 'KEDUNG MUNDU', '3374070', 'Jl. Sambiroto 1, Kec. Tambalang', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374015', 'ROWOSARI', '3374070', 'Ds. Rowosari, Kec. Tambalang', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374016', 'TELOGOSARI KULON', '3374080', 'Jl. Taman Satrio Manah 2, Ds. Telogosari Kulon, Kec. Pedurungan', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374017', 'TELOGOSARI WETAN', '3374080', 'Ds. Telogosari Wetan, Kec. Pedurungan', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374018', 'GENUK', '3374090', 'Jl. Genuksari, Kec. Genuk', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374019', 'BANGET AYU', '3374090', 'Jl. Raya Bangetayu, Kec. Genuk', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374020', 'GAYAM SARI', '3374100', 'Jl. Slamet Riyadi, Kel. Gayamsari, Kec. Gayamsari', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374021', 'HALMAHERA', '3374110', 'Jl. Halmahera Raya 38, Kec. Semarang Timur', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374022', 'KARANG DORO', '3374110', 'Jl. Raden Patah 178, Kec. Semarang Timur', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374023', 'BUGANGAN', '3374110', 'Jl. Cilosari, Kec. Semarang Timur', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374024', 'BANDARHARJO', '3374120', 'Jl. Cumi Cumi Raya, Kec. Semarang Utara', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374025', 'BULU LOR', '3374120', 'Jl. Bonowati Selatan II, Kec. Semarang Utara', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374026', 'PONCOL', '3374130', 'Jl. Imam Bonjol 114, Kec. Semarang Tengah', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374027', 'MIROTO', '3374130', 'Ds. Miroto, Kec. Semarang Tengah', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374028', 'KARANG AYU', '3374140', 'Jl. Kencowungu III/28, Kec. Semarang Barat', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374029', 'LEBDOSARI', '3374140', 'Jl. Taman Lebdosari, Kec. Semarang Barat', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374030', 'MANYARAN', '3374140', 'Jl. Abdulrahman Saleh 267, Ds. Manyaran, Kec. Semarang Barat', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374031', 'KROBOKAN', '3374140', 'Jl. Ari Buana I/XIII, Kec. Semarang Barat', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374032', 'NGEMPLAK SIMONGAN', '3374140', 'Jl. Srinindito 48/11,, Ds. Ngemplaksimongan, Kec. Semarang Barat', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374033', 'MANGKANG', '3374150', 'Jl. Raya Mangkang, Kec. Tugu', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374034', 'KARANG ANYAR', '3374150', 'Jl. Karang Anyar, Kec. Tugu', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374035', 'NGALIAN', '3374160', 'Jl. Wismasari, Kec. Ngalian', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374036', 'TAMBAK AJI', '3374160', 'Jl. Raya Wahsongo, Ds. Tambak Aji, Kec. Ngaliyan', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374037', 'PURWOYOSO', '3374160', 'Jl. Jenderal Sudirman, Ds. Purwoyoso, Kec. Ngaliyan', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
+('3374038', 'Tes', '3374050', '-', 'Mandiri', 'A', '123', 'B', '4321', '0', '', '2020-01-29 15:19:28');
 
 -- --------------------------------------------------------
 
@@ -9558,36 +9541,50 @@ CREATE TABLE `userapp` (
 --
 
 INSERT INTO `userapp` (`idUser`, `nip`, `nama`, `phone`, `email`, `foto`, `level`, `password`, `aktif`, `tglInput`, `flag`) VALUES
-('339999999999999', '', 'admin', '0859999999', 'admin@email.com', '', '1', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2018-08-16 12:58:10', '0'),
-('337404000101998', '1234567891', 'Bidan', '085767965748', 'bidan@email.com', '', '2', '8da0a5ee649d1c418513809ba6980b8650bbac48', 'Ya', '2018-08-16 12:02:40', '0'),
-('330000000000004', '090909', 'dinkes propinsi', '085727365742', 'dinkespropinsi@email.com', '', '5', '8da0a5ee649d1c418513809ba6980b8650bbac48', 'Ya', '2018-08-14 16:13:00', '0'),
-('337400900000001', '677980980', 'Puskesmas Pegadan', '08523479353', 'puskesmas@email.com', 'http://localhost/project/mozita/uploads/pp/337400900000001.jpg', '3', '8da0a5ee649d1c418513809ba6980b8650bbac48', 'Ya', '2018-08-16 15:18:59', '0'),
-('330000000000002', '12456464', 'petric', '085888898889', 'petric@email.com', '', '5', 'f6a51c155d95861c35febb700cb661b34f4a85b5', 'Tidak', '2018-08-16 15:21:41', '0'),
-('337404000103992', '9999999', 'bidan puspitasari', '085727365748', 'bidanpuspitasi@email.com', '', '2', '5af9b30dfa5b0989612ca4d38de8634b99ffaf7f', 'Ya', '2018-08-21 05:03:41', '0'),
-('337400000000001', '34567890', 'dinkes semarang kota', '09857689', 'dinkessemarang@email.com', '', '4', '8da0a5ee649d1c418513809ba6980b8650bbac48', 'Ya', '2018-08-27 19:27:29', '0'),
-('337404000107991', '2345678', 'bidansaptabakti', '09345678', 'bidansaptabakti@email.com', '', '2', '8da0a5ee649d1c418513809ba6980b8650bbac48', 'Ya', '2018-08-30 05:34:30', '0'),
-('337404000000000', '3325111611940004', 'Fakhir Rizal', '085696303627', 'fakhir_rizal@hotmail.com', '', '6', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2019-11-01 15:56:18', '0');
+('330000000000005', '12456464', 'Petric, M. Kes.', '085888898889', 'petric@email.com', '', '5', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Tidak', '2018-08-16 15:21:41', '0'),
+('330000000000006', '090909', 'Dinkes Provinsi', '085727365742', 'dinkespropinsi@email.com', '', '5', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2018-08-14 16:13:00', '0'),
+('337400000000002', '34567890', 'Dinkes Semarang Kota', '09857689', 'dinkessemarang@email.com', '', '4', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2018-08-27 19:27:29', '0'),
+('337400900000001', '677980980', 'Puskesmas Pegadan', '08523479353', 'puskesmas@email.com', '', '3', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2018-08-16 15:18:59', '0'),
+('337404000000000', '3325111611940004', 'Fakhir Rizal', '085696303627', 'fakhir_rizal@hotmail.com', '', '6', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2019-11-01 15:56:18', '0'),
+('337404000000001', '4505454', 'Aris Riyanto', '56405656', 'aris@gmail.com', '', '6', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2019-11-25 02:50:51', '0'),
+('337404000000002', '6546065406', 'Sukirno', '085696303629', 'sukirno@mail.com', '', '6', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2020-01-18 14:04:12', '0'),
+('337404000101998', '1234567891', 'Bidan', '085767965748', 'bidan@email.com', '', '2', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2018-08-16 12:02:40', '0'),
+('337404000103993', '9999999', 'Bidan Puspitasari', '085727365748', 'bidanpuspitasi@email.com', '', '2', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2018-08-21 05:03:41', '0'),
+('337404000107993', '2345678', 'Bidan Sapta Bhakti', '09345678', 'bidansaptabakti@email.com', '', '2', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2018-08-30 05:34:30', '0'),
+('337404000200001', '213109213', 'Estio Nurcahyanto', '1231231', 'estio@gmail.com', '', '7', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2019-11-25 02:50:18', '0'),
+('337404000800001', '10001011', 'Sharfina Aulia P.', '51005106', 'fina@mail.com', '', '7', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2019-11-25 03:11:34', '0'),
+('339999999999999', '', 'Admin', '085696303627', 'admin@email.com', '', '1', '6498028861eb3cc24ddb1cf43744c43aa735179a', 'Ya', '2018-08-16 12:58:10', '0');
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `balita`
+--
+ALTER TABLE `balita`
+  ADD PRIMARY KEY (`norm`),
+  ADD KEY `userInput` (`userInput`);
+
+--
 -- Indexes for table `desa`
 --
 ALTER TABLE `desa`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`,`district_id`,`idpusk`);
 
 --
 -- Indexes for table `kab`
 --
 ALTER TABLE `kab`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`,`province_id`);
 
 --
 -- Indexes for table `kec`
 --
 ALTER TABLE `kec`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`,`regency_id`);
 
 --
@@ -9600,24 +9597,29 @@ ALTER TABLE `penimbangan`
 -- Indexes for table `posyandu`
 --
 ALTER TABLE `posyandu`
+  ADD PRIMARY KEY (`idpos`),
   ADD KEY `idpos` (`idpos`,`desa_id`);
 
 --
 -- Indexes for table `propinsi`
 --
 ALTER TABLE `propinsi`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`);
 
 --
 -- Indexes for table `puskesmas`
 --
 ALTER TABLE `puskesmas`
-  ADD KEY `idpusk` (`idpusk`);
+  ADD PRIMARY KEY (`idpusk`),
+  ADD KEY `idpusk` (`idpusk`),
+  ADD KEY `id_kecamatan` (`id_kecamatan`);
 
 --
 -- Indexes for table `userapp`
 --
 ALTER TABLE `userapp`
+  ADD PRIMARY KEY (`idUser`),
   ADD KEY `idUser` (`idUser`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

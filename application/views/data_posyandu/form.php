@@ -59,7 +59,8 @@
         $(document).on('change','#desa', function(){
             var id = $("#desa").val();
             $.post("<?= site_url('posyandu/combobox/puskesmas/') ?>"+id,{id_desa:id}, function(result){
-                $("#puskesmas").val(result);
+                // $("#puskesmas").val(result);
+                $("#puskesmas").html(result);
             });
         });       
         
@@ -167,6 +168,7 @@
                         '&kabupaten='+$('#kabupaten').val()+
                         '&kecamatan='+$('#kecamatan').val()+
                         '&desa='+$('#desa').val()+
+                        '&idpusk='+$('#puskesmas').val()+
                         '&idpos='+$('#idpos').val();
             
             $.ajax({
@@ -371,10 +373,10 @@
                                 <div class="col-md-2">
                                     <label>Puskesmas *</label>
                                 </div>
-                                <div class="col-md-5">
+                                <!-- <div class="col-md-5">
                                     <input type="text" id="puskesmas" class="form-control" value="<?= ((isset($data->namapusk))? $data->namapusk:"") ?>" disabled/>
-                                </div>
-                                <!-- kodingan baru
+                                </div> -->
+                                <!-- kodingan baru -->
                                 <div class="col-md-5">
                                     <select id="puskesmas" class="select2 form-control" style="width:100%">
                                         <option value="">Pilih</option>
@@ -396,7 +398,7 @@
                                             }
                                         ?>
                                     </select>
-                                </div> -->
+                                </div>
                             </div>
                     <?php   } ?>
                 </div><!-- ./ card-body -->

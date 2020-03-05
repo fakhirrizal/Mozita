@@ -333,7 +333,8 @@
                         '&tb_u_pb_u='+tb_u_pb_u+
                         '&bb_tb_bb_pb='+bb_tb_bb_pb+
                         '&imt_u='+imt_u+
-                        '&lila_u='+$('input[name=lila_u]:checked').val();
+                        '&lila_u='+$('input[name=lila_u]:checked').val()+
+                        '&intervensi='+$('#intervensi').val();
             
             $.ajax({
                 type: 'POST',
@@ -840,6 +841,17 @@
                                         <span class="custom-control-indicator"></span>
                                         <span class="custom-control-description">>11.5 CM</span>
                                     </label>
+                                </div>
+                            </div>
+
+                            <div class="row m-t-20">
+                                <div class="col-md-4">
+                                    <label>Intervensi</label>                            
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <input type="text" id="intervensi" class="form-control" value="<?= ((isset($data->intervensi))? $data->intervensi:"") ?>">
+                                    </div>
                                 </div>
                             </div>
                             
