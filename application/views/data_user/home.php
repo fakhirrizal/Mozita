@@ -157,15 +157,19 @@
                 $("#puskesmas").html(result);
                 $('.select2').select2();
             });
-        });
-
-        $(document).on('change','#puskesmas', function(){
-            var id = $("#puskesmas").val();
             $.post("<?= site_url('data_user/combobox/desa/') ?>"+id,{id_puskesmas:id}, function(result){
                 $("#desa").html(result);
                 $('.select2').select2();
             });
         });
+
+        // $(document).on('change','#kecamatan', function(){
+        //     var id = $("#kecamatan").val();
+        //     $.post("<?= site_url('data_user/combobox/desa/') ?>"+id,{id_puskesmas:id}, function(result){
+        //         $("#desa").html(result);
+        //         $('.select2').select2();
+        //     });
+        // });
 
         $(document).on('change','#desa', function(){
             var id = $("#desa").val();

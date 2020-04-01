@@ -74,7 +74,7 @@
 							</div>
 							<div class="text-center m-t-20">
 								<center  style="font-size: 12px;">
-									Copyright 2018 © Aplikasi Monitoring Gizi Balita
+									Copyright 2019 © Aplikasi Monitoring Gizi Balita
 								</center>
 							</div>
 						</form>

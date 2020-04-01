@@ -1,9 +1,9 @@
-<li> 
+<!-- <li> 
     <a href="<?= site_url() ?>/pengaturan-propinsi" class="waves-effect waves-dark" aria-expanded="false">
         <i class="mdi mdi-map-marker-radius"></i>
         <span class="hide-menu">Pengaturan Propinsi</span>
     </a>
-</li>
+</li> -->
 <li> 
     <a href="<?= site_url() ?>/data-puskesmas" class="waves-effect waves-dark <?= ((isset($menu) && $menu == "Data Puskesmas" )? "active":"") ?>" aria-expanded="false">
         <i class="mdi mdi-hospital-building"></i>

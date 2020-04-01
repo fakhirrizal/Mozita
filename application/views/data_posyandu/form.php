@@ -20,6 +20,7 @@
             $('#kabupaten').select2().prop("disabled",true);
             $('#kecamatan').select2().prop("disabled",true);
             $('#desa').select2().prop("disabled",true);
+            $('#puskesmas').select2().prop("disabled",true);
         }
     });
 </script>
@@ -89,7 +90,7 @@
             $('#kabupaten').select2().prop("disabled",false);
             $('#kecamatan').select2().prop("disabled",false);
             $('#desa').select2().prop("disabled",false);
-            $("#puskesmas").prop("disabled",true);
+            $("#puskesmas").select2().prop("disabled",false);
         });
 
         $(document).on('click','#btn_cancel', function(){
@@ -107,6 +108,7 @@
             $('#kabupaten').select2().prop("disabled",true);
             $('#kecamatan').select2().prop("disabled",true);
             $('#desa').select2().prop("disabled",true);
+            $('#puskesmas').select2().prop("disabled",true);
         });
     });
 </script>
@@ -153,6 +155,10 @@
                 $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> Desa Belum Diisi</font>");
                 $('#desa').focus();
                 return (false);
+            }else if($('#puskesmas').val() == "0"){
+                $('#validasi').html("<font style='color:red'><i class='fa fa-exclamation-triangle'></i> Puskesmas Belum Diisi</font>");
+                $('#puskesmas').focus();
+                return (false);
             }
 
             $('.btn_save').prop('disabled',true);
@@ -198,6 +204,7 @@
                             $('#kabupaten').select2().prop("disabled",true);
                             $('#kecamatan').select2().prop("disabled",true);
                             $('#desa').select2().prop("disabled",true);
+                            $('#puskesmas').select2().prop("disabled",true);
                         }                         
                     }
                     $('#validasi').html(result['message']);

@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.0.1
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 30 Jan 2020 pada 05.46
--- Versi Server: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Waktu pembuatan: 23 Mar 2020 pada 13.02
+-- Versi server: 10.4.11-MariaDB
+-- Versi PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -33,12 +35,12 @@ CREATE TABLE `balita` (
   `jenkel` enum('Laki-laki','Perempuan') NOT NULL,
   `nmortu` varchar(75) NOT NULL,
   `nikortu` varchar(20) NOT NULL,
-  `wa_ortu` text,
+  `wa_ortu` text DEFAULT NULL,
   `gakin` enum('Ya','Tidak','','') NOT NULL,
   `fotobayi` text NOT NULL,
-  `lat` text,
-  `lng` text,
-  `tglInput` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `lat` text DEFAULT NULL,
+  `lng` text DEFAULT NULL,
+  `tglInput` timestamp NOT NULL DEFAULT current_timestamp(),
   `kms` enum('Ya','Tidak') NOT NULL,
   `aktif` enum('Ya','Tidak') NOT NULL DEFAULT 'Ya',
   `userInput` varchar(15) NOT NULL,
@@ -51,10 +53,10 @@ CREATE TABLE `balita` (
 
 INSERT INTO `balita` (`norm`, `nama`, `tgllahir`, `jenkel`, `nmortu`, `nikortu`, `wa_ortu`, `gakin`, `fotobayi`, `lat`, `lng`, `tglInput`, `kms`, `aktif`, `userInput`, `flag`) VALUES
 ('33251100190020001', 'Nama Baru', '01-01-2019', 'Laki-laki', 'Ayah', '53648640684', '085696303627', 'Ya', '', '-6.90969890359195', '109.73454102257492', '2020-01-18 16:40:08', 'Ya', 'Ya', '339999999999999', '0'),
-('337404000101008', 'Misik Puspajati Nurmajid', '19-09-2016', 'Perempuan', 'Sugiharto', '134646879', '+62 896-7639-1780', 'Tidak', 'http://localhost:8080/mozita/uploads/balita/337404000101/202001/33999999999999920200106165212.png', '-6.981495893293304', '110', '2018-08-19 16:51:19', 'Ya', 'Ya', '339999999999999', '0'),
-('33740400010518001', 'Rudi Kurniawan', '30-08-2018', 'Laki-laki', 'Roy Suryo', '12347', '+62 896-7639-1780', 'Ya', 'http://localhost:8080/mozita/uploads/balita/337404000105/202001/33999999999999920200106164821.png', '-6.982859', '110.40947499999993', '2018-08-30 14:43:48', 'Ya', 'Ya', '339999999999999', '0'),
-('33740400010518002', 'Anisa Rossy Rahmatika', '14-11-2018', 'Perempuan', 'Budi Gunawan', '23423409823', '', 'Tidak', 'http://localhost:8080/mozita/uploads/balita/337404000105/202001/33999999999999920200106165159.png', '-6.982859', '110.40947499999993', '2018-08-30 14:44:48', 'Ya', 'Ya', '339999999999999', '0'),
-('33740400010718002', 'Riyan Apriyanto', '30-08-2018', 'Perempuan', 'Budi Ariel', '21345679', '', 'Tidak', '', '-6.982859', '110.40947499999993', '2018-08-30 14:07:24', 'Ya', 'Ya', '339999999999999', '0');
+('337404000101008', 'Misik Puspajati Nurmajid', '19-09-2016', 'Perempuan', 'Sugiharto', '134646879', '+62 896-7639-1780', 'Tidak', 'http://localhost:8080/mozita/uploads/balita/337404000101/202001/33999999999999920200106165212.png', '-7.008714677227722', '110.42220115661621', '2018-08-19 16:51:19', 'Ya', 'Ya', '339999999999999', '0'),
+('33740400010518001', 'Rudi Kurniawan', '30-08-2018', 'Laki-laki', 'Roy Suryo', '12347', '+62 896-7639-1780', 'Ya', 'http://localhost:8080/mozita/uploads/balita/337404000105/202001/33999999999999920200106164821.png', '-6.9853296207815045', '110.40140691528315', '2018-08-30 14:43:48', 'Ya', 'Ya', '339999999999999', '0'),
+('33740400010518002', 'Anisa Rossy Rahmatika', '14-11-2018', 'Perempuan', 'Budi Gunawan', '23423409823', '', 'Tidak', 'http://localhost:8080/mozita/uploads/balita/337404000105/202001/33999999999999920200106165159.png', '-6.982688611878854', '110.41878762969965', '2018-08-30 14:44:48', 'Ya', 'Ya', '339999999999999', '0'),
+('33740400010718002', 'Riyan Apriyanto', '30-08-2018', 'Perempuan', 'Budi Ariel', '21345679', '', 'Tidak', '', '-6.984988846277234', '110.3944117141723', '2018-08-30 14:07:24', 'Ya', 'Ya', '339999999999999', '0');
 
 -- --------------------------------------------------------
 
@@ -9342,9 +9344,9 @@ CREATE TABLE `penimbangan` (
   `bb_tb_bb_pb` enum('Kurus','Normal','Sangat Kurus','') NOT NULL,
   `imt_u` enum('Kurus','Normal','Gemuk','Sangat Kurus','Obesitas') NOT NULL,
   `lila_u` enum('<11.5 cm','>11.5 cm','','') NOT NULL,
-  `intervensi` text,
+  `intervensi` text DEFAULT NULL,
   `iduser` varchar(15) NOT NULL,
-  `tgljamentry` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `tgljamentry` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `baca` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -9365,13 +9367,14 @@ INSERT INTO `penimbangan` (`norm`, `umurbayi`, `tglpenimbangan`, `bb`, `tb`, `pb
 --
 
 CREATE TABLE `posyandu` (
+  `idpusk` varchar(7) NOT NULL,
   `idpos` varchar(12) NOT NULL,
   `namapos` varchar(75) NOT NULL,
   `alamatpos` varchar(100) NOT NULL,
   `rt` varchar(5) NOT NULL,
   `rw` varchar(5) NOT NULL,
   `desa_id` varchar(10) NOT NULL,
-  `tglInput` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `tglInput` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `idUser` varchar(15) NOT NULL,
   `flag` enum('0','1') NOT NULL DEFAULT '0' COMMENT '0=delete false, 1=delete true'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -9380,56 +9383,55 @@ CREATE TABLE `posyandu` (
 -- Dumping data untuk tabel `posyandu`
 --
 
-INSERT INTO `posyandu` (`idpos`, `namapos`, `alamatpos`, `rt`, `rw`, `desa_id`, `tglInput`, `idUser`, `flag`) VALUES
-('332511001900', 'Tes', 'Proyonanggan Tengah', '003', '001', '3325110019', '2020-01-18 16:37:45', '', '0'),
-('337404000101', 'ANGGRAINI', '', 'RW I', '001', '3374040001', '2018-08-17 03:49:53', '', '0'),
-('337404000102', 'WIJAYA KUSUMA', '', 'RW II', '002', '3374040001', '2018-08-17 03:49:53', '', '0'),
-('337404000103', 'PUSPITASARI', '', 'RW II', '003', '3374040001', '2018-08-17 03:49:53', '', '0'),
-('337404000104', 'APSARI', '', 'RW IV', '004', '3374040001', '2018-08-17 03:49:53', '', '0'),
-('337404000105', 'MELATI', '', 'RW V', '005', '3374040001', '2018-08-17 03:49:53', '', '0'),
-('337404000106', 'TUNAS BANGSA', '', 'RW VI', '006', '3374040001', '2018-08-17 03:49:53', '', '0'),
-('337404000107', 'SAPTA BHAKTI HUSADA', '', 'RW VI', '007', '3374040001', '2018-08-17 03:49:53', '', '0'),
-('337404000201', 'BOUGENVILE', '', 'RW I', '001', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000202', 'MELATI', '', 'RW II', '002', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000203', 'LILY', '', 'RW II', '003', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000204', 'SEJAHTERA', '', 'RW IV', '004', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000205', 'HARAPAN BUNDA', '', 'RW V', '005', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000206', 'PERMATA BUNDA', '', 'RW VI', '007', '3374040002', '2018-08-17 03:49:53', '', '0'),
-('337404000301', 'TERATAI', '', 'RW I', '001', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000302', 'SEJAHTERA', '', 'RW II', '002', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000303', 'MELATI', '', 'RW II', '003', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000304', 'DAHLIA', '', 'RW IV', '004', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000305', 'KENANGA', '', 'RW V', '005', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000306', 'MAWAR', '', 'RW VI', '006', '3374040003', '2018-08-17 03:49:53', '', '0'),
-('337404000401', 'CEMPAKA', '', 'RW II', '002', '3374040004', '2018-08-17 03:49:53', '', '0'),
-('337404000402', 'ANGGREK', '', 'RW II', '003', '3374040004', '2018-08-17 03:49:53', '', '0'),
-('337404000403', 'MELATI', '', 'RW IV', '004', '3374040004', '2018-08-17 03:49:53', '', '0'),
-('337404000404', 'MELATI PUTIH', '', 'RW V', '005', '3374040004', '2018-08-17 03:49:53', '', '0'),
-('337404000405', 'AKPOL', '', 'RW VI', '006', '3374040004', '2018-08-17 03:49:53', '', '0'),
-('337404000406', 'SEKARSARI', '', 'RW VI', '007', '3374040004', '2018-08-17 03:49:53', '', '0'),
-('337404000407', 'MEKARSARI', '', 'RW VI', '008', '3374040004', '2018-08-17 03:49:53', '', '0'),
-('337404000408', 'MAWAR PUTIH', '', 'RW IX', '009', '3374040004', '2018-08-17 03:49:53', '', '0'),
-('337404000501', 'ANGGREK', '', 'RW I', '001', '3374040005', '2018-08-17 03:49:53', '', '0'),
-('337404000502', 'MELATI', '', 'RW II', '002', '3374040005', '2018-08-17 03:49:53', '', '0'),
-('337404000503', 'KENANGA', '', 'RW II', '003', '3374040005', '2018-08-17 03:49:53', '', '0'),
-('337404000504', 'DAHLIA', '', 'RW VI', '004', '3374040005', '2018-08-17 03:49:53', '', '0'),
-('337404000505', 'MAWAR ', '', 'RW V', '005', '3374040005', '2018-08-17 03:49:53', '', '0'),
-('337404000601', 'MELATI I', '', 'RW I', '001', '3374040006', '2018-08-17 03:49:53', '', '0'),
-('337404000602', 'MELATI II', '', 'RW II', '002', '3374040006', '2018-08-17 03:49:53', '', '0'),
-('337404000603', 'MELATI III', '', 'RW II', '003', '3374040006', '2018-08-17 03:49:53', '', '0'),
-('337404000604', 'MELATI IV', '', 'RW IV', '004', '3374040006', '2018-08-17 03:49:53', '', '0'),
-('337404000605', 'MELATI V', '', 'RW V', '005', '3374040006', '2018-08-17 03:49:53', '', '0'),
-('337404000701', 'RAHAYU I', '', 'RW I', '001', '3374040007', '2018-08-17 03:49:53', '', '0'),
-('337404000702', 'MENUR', '', 'RW II', '002', '3374040007', '2018-08-17 03:49:53', '', '0'),
-('337404000703', 'SERUNI', '', 'RW II', '003', '3374040007', '2018-08-17 03:49:53', '', '0'),
-('337404000704', 'MAWAR', '', 'RW IV', '004', '3374040007', '2018-08-17 03:49:53', '', '0'),
-('337404000705', 'RAHAYU V', '', 'RW V', '005', '3374040007', '2018-08-17 03:49:53', '', '0'),
-('337404000801', 'NUSA INDAH', '', 'RW I ', '001', '3374040008', '2018-08-17 03:49:53', '', '0'),
-('337404000802', 'MELATI', '', 'RW II', '002', '3374040008', '2018-08-17 03:49:53', '', '0'),
-('337404000803', 'MAWAR', '', 'RW II', '003', '3374040008', '2018-08-17 03:49:53', '', '0'),
-('337404000804', 'DAHLIA', '', 'RW IV', '004', '3374040008', '2018-08-17 03:49:53', '', '0'),
-('337404000805', 'KEMBANG SEPATU', '', 'RW V', '005', '3374040008', '2018-08-17 03:49:53', '', '0'),
-('337404000806', 'CEMPAKA', '', 'RW VI', '006', '3374040008', '2018-08-17 03:49:53', '', '0');
+INSERT INTO `posyandu` (`idpusk`, `idpos`, `namapos`, `alamatpos`, `rt`, `rw`, `desa_id`, `tglInput`, `idUser`, `flag`) VALUES
+('', '337404000101', 'ANGGRAINI', '', 'RW I', '001', '3374040001', '2018-08-17 03:49:53', '', '0'),
+('', '337404000102', 'WIJAYA KUSUMA', '', 'RW II', '002', '3374040001', '2018-08-17 03:49:53', '', '0'),
+('', '337404000103', 'PUSPITASARI', '', 'RW II', '003', '3374040001', '2018-08-17 03:49:53', '', '0'),
+('', '337404000104', 'APSARI', '', 'RW IV', '004', '3374040001', '2018-08-17 03:49:53', '', '0'),
+('', '337404000105', 'MELATI', '', 'RW V', '005', '3374040001', '2018-08-17 03:49:53', '', '0'),
+('', '337404000106', 'TUNAS BANGSA', '', 'RW VI', '006', '3374040001', '2018-08-17 03:49:53', '', '0'),
+('', '337404000107', 'SAPTA BHAKTI HUSADA', '', 'RW VI', '007', '3374040001', '2018-08-17 03:49:53', '', '0'),
+('', '337404000201', 'BOUGENVILE', '', 'RW I', '001', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('', '337404000202', 'MELATI', '', 'RW II', '002', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('', '337404000203', 'LILY', '', 'RW II', '003', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('', '337404000204', 'SEJAHTERA', '', 'RW IV', '004', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('', '337404000205', 'HARAPAN BUNDA', '', 'RW V', '005', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('', '337404000206', 'PERMATA BUNDA', '', 'RW VI', '007', '3374040002', '2018-08-17 03:49:53', '', '0'),
+('', '337404000301', 'TERATAI', '', 'RW I', '001', '3374040003', '2018-08-17 03:49:53', '', '0'),
+('', '337404000302', 'SEJAHTERA', '', 'RW II', '002', '3374040003', '2018-08-17 03:49:53', '', '0'),
+('', '337404000303', 'MELATI', '', 'RW II', '003', '3374040003', '2018-08-17 03:49:53', '', '0'),
+('', '337404000304', 'DAHLIA', '', 'RW IV', '004', '3374040003', '2018-08-17 03:49:53', '', '0'),
+('', '337404000305', 'KENANGA', '', 'RW V', '005', '3374040003', '2018-08-17 03:49:53', '', '0'),
+('', '337404000306', 'MAWAR', '', 'RW VI', '006', '3374040003', '2018-08-17 03:49:53', '', '0'),
+('', '337404000401', 'CEMPAKA', '', 'RW II', '002', '3374040004', '2018-08-17 03:49:53', '', '0'),
+('', '337404000402', 'ANGGREK', '', 'RW II', '003', '3374040004', '2018-08-17 03:49:53', '', '0'),
+('', '337404000403', 'MELATI', '', 'RW IV', '004', '3374040004', '2018-08-17 03:49:53', '', '0'),
+('', '337404000404', 'MELATI PUTIH', '', 'RW V', '005', '3374040004', '2018-08-17 03:49:53', '', '0'),
+('', '337404000405', 'AKPOL', '', 'RW VI', '006', '3374040004', '2018-08-17 03:49:53', '', '0'),
+('', '337404000406', 'SEKARSARI', '', 'RW VI', '007', '3374040004', '2018-08-17 03:49:53', '', '0'),
+('', '337404000407', 'MEKARSARI', '', 'RW VI', '008', '3374040004', '2018-08-17 03:49:53', '', '0'),
+('', '337404000408', 'MAWAR PUTIH', '', 'RW IX', '009', '3374040004', '2018-08-17 03:49:53', '', '0'),
+('', '337404000501', 'ANGGREK', '', 'RW I', '001', '3374040005', '2018-08-17 03:49:53', '', '0'),
+('', '337404000502', 'MELATI', '', 'RW II', '002', '3374040005', '2018-08-17 03:49:53', '', '0'),
+('', '337404000503', 'KENANGA', '', 'RW II', '003', '3374040005', '2018-08-17 03:49:53', '', '0'),
+('', '337404000504', 'DAHLIA', '', 'RW VI', '004', '3374040005', '2018-08-17 03:49:53', '', '0'),
+('', '337404000505', 'MAWAR ', '', 'RW V', '005', '3374040005', '2018-08-17 03:49:53', '', '0'),
+('', '337404000601', 'MELATI I', '', 'RW I', '001', '3374040006', '2018-08-17 03:49:53', '', '0'),
+('', '337404000602', 'MELATI II', '', 'RW II', '002', '3374040006', '2018-08-17 03:49:53', '', '0'),
+('', '337404000603', 'MELATI III', '', 'RW II', '003', '3374040006', '2018-08-17 03:49:53', '', '0'),
+('', '337404000604', 'MELATI IV', '', 'RW IV', '004', '3374040006', '2018-08-17 03:49:53', '', '0'),
+('', '337404000605', 'MELATI V', '', 'RW V', '005', '3374040006', '2018-08-17 03:49:53', '', '0'),
+('', '337404000701', 'RAHAYU I', '', 'RW I', '001', '3374040007', '2018-08-17 03:49:53', '', '0'),
+('', '337404000702', 'MENUR', '', 'RW II', '002', '3374040007', '2018-08-17 03:49:53', '', '0'),
+('', '337404000703', 'SERUNI', '', 'RW II', '003', '3374040007', '2018-08-17 03:49:53', '', '0'),
+('', '337404000704', 'MAWAR', '', 'RW IV', '004', '3374040007', '2018-08-17 03:49:53', '', '0'),
+('', '337404000705', 'RAHAYU V', '', 'RW V', '005', '3374040007', '2018-08-17 03:49:53', '', '0'),
+('', '337404000801', 'NUSA INDAH', '', 'RW I ', '001', '3374040008', '2018-08-17 03:49:53', '', '0'),
+('', '337404000802', 'MELATI', '', 'RW II', '002', '3374040008', '2018-08-17 03:49:53', '', '0'),
+('', '337404000803', 'MAWAR', '', 'RW II', '003', '3374040008', '2018-08-17 03:49:53', '', '0'),
+('', '337404000804', 'DAHLIA', '', 'RW IV', '004', '3374040008', '2018-08-17 03:49:53', '', '0'),
+('', '337404000805', 'KEMBANG SEPATU', '', 'RW V', '005', '3374040008', '2018-08-17 03:49:53', '', '0'),
+('', '337404000806', 'CEMPAKA', '', 'RW VI', '006', '3374040008', '2018-08-17 03:49:53', '', '0');
 
 -- --------------------------------------------------------
 
@@ -9467,7 +9469,7 @@ CREATE TABLE `puskesmas` (
   `nipnutri` varchar(20) NOT NULL,
   `flag` enum('0','1') NOT NULL DEFAULT '0' COMMENT '0=delete false, 1=delete true',
   `userInput` varchar(15) NOT NULL,
-  `tglInput` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `tglInput` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -9475,8 +9477,6 @@ CREATE TABLE `puskesmas` (
 --
 
 INSERT INTO `puskesmas` (`idpusk`, `namapusk`, `id_kecamatan`, `almtpusk`, `jenis`, `keppusk`, `nipkep`, `nutripusk`, `nipnutri`, `flag`, `userInput`, `tglInput`) VALUES
-('3325001', 'BATANG I', '3325110', 'Jl. Dr.Cipto No.34, Kertonegoran, Proyonanggan Tengah, Kec. Batang', '', '', '', '', '', '0', '', '2020-01-18 15:15:48'),
-('3325002', 'Tes Lagi', '3325050', '-', 'Mandiri', 'Bu A', '123', 'Bu B', '4321', '0', '', '2020-01-29 15:35:41'),
 ('3374001', 'MIJEN', '3374010', 'Ds. Mijen, Kec. Mijen', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
 ('3374002', 'KARANG MALANG', '3374010', 'Jl. Karang Malang, Kec. Mijen', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
 ('3374003', 'GUNUNG PATI', '3374020', 'Jl. Raya Gunung Pati, Kec. Gunung Pati', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
@@ -9514,7 +9514,7 @@ INSERT INTO `puskesmas` (`idpusk`, `namapusk`, `id_kecamatan`, `almtpusk`, `jeni
 ('3374035', 'NGALIAN', '3374160', 'Jl. Wismasari, Kec. Ngalian', 'Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
 ('3374036', 'TAMBAK AJI', '3374160', 'Jl. Raya Wahsongo, Ds. Tambak Aji, Kec. Ngaliyan', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
 ('3374037', 'PURWOYOSO', '3374160', 'Jl. Jenderal Sudirman, Ds. Purwoyoso, Kec. Ngaliyan', 'Non Perawatan', '', '', '', '', '0', '', '2018-08-24 08:08:58'),
-('3374038', 'Tes', '3374050', '-', 'Mandiri', 'A', '123', 'B', '4321', '0', '', '2020-01-29 15:19:28');
+('3374038', 'Tesss', '3374020', 'Jln. dr. Cipto 61', 'Tesss', 'AA', '11', 'BB', '22', '0', '', '2020-03-23 07:43:52');
 
 -- --------------------------------------------------------
 
@@ -9532,7 +9532,7 @@ CREATE TABLE `userapp` (
   `level` enum('1','2','3','4','5','6','7') NOT NULL COMMENT '1=admin, 2=bidan/kader, 3=puskesmas, 4=dinkes kabupaten/kota, 5=dinkes propinsi, 6=camat, 7=lurah',
   `password` varchar(50) NOT NULL,
   `aktif` enum('Ya','Tidak') NOT NULL DEFAULT 'Ya',
-  `tglInput` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `tglInput` timestamp NOT NULL DEFAULT current_timestamp(),
   `flag` enum('0','1') DEFAULT '0' COMMENT '0= delete false, 1=delete true'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -9560,55 +9560,56 @@ INSERT INTO `userapp` (`idUser`, `nip`, `nama`, `phone`, `email`, `foto`, `level
 --
 
 --
--- Indexes for table `balita`
+-- Indeks untuk tabel `balita`
 --
 ALTER TABLE `balita`
   ADD PRIMARY KEY (`norm`),
   ADD KEY `userInput` (`userInput`);
 
 --
--- Indexes for table `desa`
+-- Indeks untuk tabel `desa`
 --
 ALTER TABLE `desa`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`,`district_id`,`idpusk`);
 
 --
--- Indexes for table `kab`
+-- Indeks untuk tabel `kab`
 --
 ALTER TABLE `kab`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`,`province_id`);
 
 --
--- Indexes for table `kec`
+-- Indeks untuk tabel `kec`
 --
 ALTER TABLE `kec`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`,`regency_id`);
 
 --
--- Indexes for table `penimbangan`
+-- Indeks untuk tabel `penimbangan`
 --
 ALTER TABLE `penimbangan`
   ADD KEY `norm` (`norm`,`iduser`);
 
 --
--- Indexes for table `posyandu`
+-- Indeks untuk tabel `posyandu`
 --
 ALTER TABLE `posyandu`
   ADD PRIMARY KEY (`idpos`),
-  ADD KEY `idpos` (`idpos`,`desa_id`);
+  ADD KEY `idpos` (`idpos`,`desa_id`),
+  ADD KEY `idpusk` (`idpusk`);
 
 --
--- Indexes for table `propinsi`
+-- Indeks untuk tabel `propinsi`
 --
 ALTER TABLE `propinsi`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`);
 
 --
--- Indexes for table `puskesmas`
+-- Indeks untuk tabel `puskesmas`
 --
 ALTER TABLE `puskesmas`
   ADD PRIMARY KEY (`idpusk`),
@@ -9616,11 +9617,12 @@ ALTER TABLE `puskesmas`
   ADD KEY `id_kecamatan` (`id_kecamatan`);
 
 --
--- Indexes for table `userapp`
+-- Indeks untuk tabel `userapp`
 --
 ALTER TABLE `userapp`
   ADD PRIMARY KEY (`idUser`),
   ADD KEY `idUser` (`idUser`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

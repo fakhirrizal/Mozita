@@ -36,7 +36,7 @@ class Posyandu_m extends CI_Model {
 					JOIN kec ON kec.id = desa.district_id
 					JOIN kab ON kab.id = kec.regency_id
 					JOIN propinsi ON propinsi.id = kab.province_id
-					JOIN puskesmas ON puskesmas.idpusk = posyandu.idpusk
+					LEFT JOIN puskesmas ON puskesmas.idpusk = posyandu.idpusk
 					WHERE propinsi.id = '".$_SESSION['kode_propinsi']."'
 					  AND posyandu.flag = '0'
 					  AND MD5(posyandu.idpos) = '$idpos'";
@@ -83,7 +83,7 @@ class Posyandu_m extends CI_Model {
 				 ->join("kec", "kec.id = desa.district_id")
 				 ->join("kab", "kab.id = kec.regency_id")
 				 ->join("propinsi", "propinsi.id = kab.province_id")
-				 ->join("puskesmas", "puskesmas.idpusk = posyandu.idpusk")
+				 ->join("puskesmas", "puskesmas.idpusk = posyandu.idpusk", "LEFT")
 				 ->where("propinsi.id = '".$_SESSION['kode_propinsi']."'")
 				 ->where("posyandu.flag = '0'")
 				 ->from("posyandu");

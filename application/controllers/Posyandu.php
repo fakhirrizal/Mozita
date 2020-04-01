@@ -40,8 +40,20 @@ class Posyandu extends CI_Controller {
             $data_user = $this->Posyandu_m->posyanduById($id);
             $data['data'] = $data_user;
             $data['data_kec'] = $this->Kecamatan_m->get_data($id_kecamatan = null, $data_user->id_kab)->result();
-            $data['data_desa'] = $this->Desa_m->desaByIdpusk($data_user->id_pusk)->result();
+            $data['data_desa'] = $this->Desa_m->desaByIdKec($data_user->id_kec)->result();
+            $where = substr($data_user->id_desa,0,7);
+            $data['data_pusk'] = $this->db->query("SELECT a.* FROM puskesmas a WHERE a.id_kecamatan='".$where."'")->result();
+            // $where = substr($id,0,7);
+            //     $data = $this->db->query("SELECT a.* FROM puskesmas a WHERE a.id_kecamatan='".$where."'")->result();
+
+            //     $list = '<option value="">Pilih</option>';
+            //     if(!empty($data)){
+            //         foreach ($data as $rows) {
+            //             $list .= '<option value="'.$rows->idpusk.'">'.$rows->namapusk.'</option>';
+            //         }
+            //     }
             /* get data puskesmas
+            $data['data_desa'] = $this->Desa_m->desaByIdpusk($data_user->id_pusk)->result();
             $data['data_pusk'] = $this->Desa_m->desaByIdpusk($data_user->id_pusk)->result(); */
         }else{
             $data['judul']	= 'Tambah Data Posyandu';

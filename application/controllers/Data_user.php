@@ -35,8 +35,11 @@ class Data_user extends CI_Controller {
             $data['data'] = $data_user;
             // $data['data_kab'] = $this->Kabupaten_m->get_data($id_kabupaten = null, $data_user->id_prop)->result();
             $data['data_kec'] = $this->Kecamatan_m->get_data($id_kecamatan = null, $data_user->id_kab)->result();
-            $data['data_pusk'] = $this->Puskesmas_m->puskesmasByIdKecamatan($data_user->id_kec)->result();
-            $data['data_desa'] = $this->Desa_m->desaByIdpusk($data_user->id_pusk)->result();
+            // $data['data_pusk'] = $this->Puskesmas_m->puskesmasByIdKecamatan($data_user->id_kec)->result();
+            // $data['data_desa'] = $this->Desa_m->desaByIdpusk($data_user->id_pusk)->result();
+            $data['data_desa'] = $this->Desa_m->desaByIdKec($data_user->id_kec)->result();
+            $where = substr($data_user->id_desa,0,7);
+            $data['data_pusk'] = $this->db->query("SELECT a.* FROM puskesmas a WHERE a.id_kecamatan='".$where."'")->result();
             $data['data_pos'] = $this->Posyandu_m->posyanduByIdDesa($data_user->id_desa)->result();
         }else{
             $data['jenis_form'] = "tambah";
@@ -65,7 +68,9 @@ class Data_user extends CI_Controller {
                 $this->list_combobox($list_data);
             break;
             case 'puskesmas':
-                $data = $this->Puskesmas_m->puskesmasByIdKecamatan($id)->result();
+                // $data = $this->Puskesmas_m->puskesmasByIdKecamatan($id)->result();
+                $where = substr($id,0,7);
+                $data = $this->db->query("SELECT a.* FROM puskesmas a WHERE a.id_kecamatan='".$where."'")->result();
                 foreach ($data as $rows) {
                     $list_data[] = array('id'=>$rows->idpusk,
                                          'ket'=>$rows->namapusk);
@@ -73,7 +78,8 @@ class Data_user extends CI_Controller {
                 $this->list_combobox($list_data);
             break;
             case 'desa':
-                $data = $this->Desa_m->desaByIdpusk($id)->result();
+                // $data = $this->Desa_m->desaByIdpusk($id)->result();
+                $data = $this->Desa_m->desaByIdKec($id)->result();
                 foreach ($data as $rows) {
                     $list_data[] = array('id'=>$rows->id,
                                          'ket'=>$rows->name);
