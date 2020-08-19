@@ -115,6 +115,11 @@
 		L.latLng(<?= $this->session->userdata('lokasi'); ?>),
 		L.latLng(<?php echo $lokasi->lat; ?>,<?php echo $lokasi->lng; ?>)
 	],
+	lineOptions: {
+		styles: [
+			{color: 'blue', opacity: 1, weight: 5},
+		]
+	},
 	router: new L.Routing.osrmv1({
 		language: 'en',
 		profile: 'car'

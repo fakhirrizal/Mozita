@@ -238,10 +238,10 @@
 
         $(document).on('keyup','#lila', function(){
             var lila = $("#lila").val();
-            if(parseFloat(lila) < 11.5){
-                $("input[name=lila_u][value='<11.5 cm']").prop("checked",true);
-            }else if(parseFloat(lila) > 11.5){
-                $("input[name=lila_u][value='>11.5 cm']").prop("checked",true);
+            if(parseFloat(lila) < 23.5){
+                $("input[name=lila_u][value='<23.5 cm']").prop("checked",true);
+            }else if(parseFloat(lila) > 23.5){
+                $("input[name=lila_u][value='>23.5 cm']").prop("checked",true);
             }else if(lila == ''){
                 $("input[name=lila_u]").prop("checked",false);
             }
@@ -832,14 +832,14 @@
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">
-                                        <input name="lila_u" type="radio" class="custom-control-input" value="<11.5 cm" <?= ((isset($data->lila_u) && $data->lila_u == "<11.5 cm")? "checked":"") ?> >
+                                        <input name="lila_u" type="radio" class="custom-control-input" value="<23.5 cm" <?= ((isset($data->lila_u) && $data->lila_u == "<23.5 cm")? "checked":"") ?> >
                                         <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">< 11.5 CM</span>
+                                        <span class="custom-control-description">< 23.5 CM</span>
                                     </label>
                                     <label class="custom-control custom-radio">
-                                        <input name="lila_u" type="radio" class="custom-control-input" value=">11.5 cm" <?= ((isset($data->lila_u) && $data->lila_u == ">11.5 cm")? "checked":"") ?> >
+                                        <input name="lila_u" type="radio" class="custom-control-input" value=">23.5 cm" <?= ((isset($data->lila_u) && $data->lila_u == ">23.5 cm")? "checked":"") ?> >
                                         <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">>11.5 CM</span>
+                                        <span class="custom-control-description">>23.5 CM</span>
                                     </label>
                                 </div>
                             </div>

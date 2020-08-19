@@ -375,14 +375,14 @@
                                 </div>
                                 <div class="col-md-8">
                                     <label class="custom-control custom-radio">
-                                        <input name="lila_u" type="radio" class="custom-control-input" value="<11.5 cm" <?= ((isset($data->lila_u) && $data->lila_u == "<11.5 cm")? "checked":"") ?> >
+                                        <input name="lila_u" type="radio" class="custom-control-input" value="<23.5 cm" <?= ((isset($data->lila_u) && $data->lila_u == "<23.5 cm")? "checked":"") ?> >
                                         <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">< 11.5 CM</span>
+                                        <span class="custom-control-description">< 23.5 CM</span>
                                     </label>
                                     <label class="custom-control custom-radio">
-                                        <input name="lila_u" type="radio" class="custom-control-input" value=">11.5 cm" <?= ((isset($data->lila_u) && $data->lila_u == ">11.5 cm")? "checked":"") ?> >
+                                        <input name="lila_u" type="radio" class="custom-control-input" value=">23.5 cm" <?= ((isset($data->lila_u) && $data->lila_u == ">23.5 cm")? "checked":"") ?> >
                                         <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">>11.5 CM</span>
+                                        <span class="custom-control-description">>23.5 CM</span>
                                     </label>
                                 </div>
                             </div>

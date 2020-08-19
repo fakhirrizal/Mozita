@@ -69,8 +69,8 @@
                     <td class="text-center">KURUS</td>
                     <td class="text-center">NORMAL</td>
                     <td class="text-center">SANGAT KURUS</td>
-                    <td class="text-center">&lt;11.5 CM</td>
-                    <td class="text-center">&gt;11.5 CM</td>
+                    <td class="text-center">&lt;23.5 CM</td>
+                    <td class="text-center">&gt;23.5 CM</td>
                 </tr>
                 <tr>
                     <td class="text-center">(1)</td>
@@ -126,8 +126,8 @@
                         (($rows->bb_tb_bb_pb == "Normal")? $jml_bb_normal++ : "");
                         (($rows->bb_tb_bb_pb == "Sangat Kurus")? $jml_sgt_kurus++ : "");
 
-                        (($rows->lila_u == "<11.5 cm")? $jml_lila_1++ :"");
-                        (($rows->lila_u == ">11.5 cm")? $jml_lila_2++ :"");
+                        (($rows->lila_u == "<23.5 cm")? $jml_lila_1++ :"");
+                        (($rows->lila_u == ">23.5 cm")? $jml_lila_2++ :"");
                 ?>
                         <tr>
                             <td class="text-center"><?= $no ?></td>
@@ -150,8 +150,8 @@
                             <td class="text-center"><?= (($rows->bb_tb_bb_pb == "Normal")?"V":"") ?></td>
                             <td class="text-center"><?= (($rows->bb_tb_bb_pb == "Sangat Kurus")?"V":"") ?></td>
                             <td class="text-center"><?= $rows->imt_u ?></td>
-                            <td class="text-center"><?= (($rows->lila_u == "<11.5 cm")?"V":"") ?></td>
-                            <td class="text-center"><?= (($rows->lila_u == ">11.5 cm")?"V":"") ?></td>
+                            <td class="text-center"><?= (($rows->lila_u == "<23.5 cm")?"V":"") ?></td>
+                            <td class="text-center"><?= (($rows->lila_u == ">23.5 cm")?"V":"") ?></td>
                         </tr>
                 <?php   }   ?>
                 <tr>
